@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .background_w_image {
+    padding-bottom: 1.57042%;
+    padding-top: 0%;
+    padding-left: 0;
+    width: 105%;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("https://content.app-sources.com/s/58783475964065609/uploads/Images/Purple_Dark_Blur_Gradient_Glass_Effect_Reminder_Notification_Instagram_Post-2865570.png?format=webp");
+  }
+
+  .divider {
+    width: 100%;
+    /* background-color: white; */
+    height: 1px;
+  }
+}
+
+body {
+  background-color: #000;
+  font-family: "Montserrat", sans-serif !important;
+  font-optical-sizing: auto;
+}
