@@ -1,7 +1,6 @@
 // /app/api/checkout/route.ts
 
 import mercadopago from "mercadopago";
-import { CreatePreferencePayload } from "mercadopago/models/preferences/create-payload.model";
 import { NextRequest } from "next/server";
 
 mercadopago.configure({
@@ -15,7 +14,7 @@ const URL = "https://matiassanchezfit.vercel.app";
 
 export async function POST(req: NextRequest) {
   try {
-    const preference: CreatePreferencePayload = {
+    const preference: any = {
       items: [
         {
           title: "prueba",

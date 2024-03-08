@@ -23,11 +23,11 @@ export default function Home() {
           </span>
         </h2>
         <div className="md:my-10">
-          {/* <Video
+          <Video
             source="/videos/video-presentacion.mp4"
             width="lg:max-w-[900px]"
             height="max-h-[630px]"
-          /> */}
+          />
         </div>
         <ScrollLink href="#planes">
           <Button
@@ -37,7 +37,6 @@ export default function Home() {
           />
         </ScrollLink>
       </section>
-
       <div className="h-[40px] w-full flex justify-center items-center px-4 md:px-10 lg:px-20 max-w-[1350px] mx-auto">
         <div className="divider"></div>
       </div>
@@ -71,7 +70,7 @@ export default function Home() {
       <div className="h-[40px] w-full flex justify-center items-center px-4 md:px-10 lg:px-20 max-w-[1350px] mx-auto">
         <div className="divider"></div>
       </div>
-      {/* <Experience /> */}
+      <Experience />
       <DividerReady />
       <section className="flex w-full min-h-screen flex-col items-center justify-start my-14 px-4 md:px-10 lg:px-20 max-w-[1200px] mx-auto">
         <Carousel />
