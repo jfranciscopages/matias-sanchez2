@@ -24,13 +24,17 @@ export async function POST(req: NextRequest) {
       ],
       auto_return: "approved",
       back_urls: {
-        success: `${URL}`,
+        success: `${URL}/thank-you`,
         failure: `${URL}`,
       },
       notification_url: `${URL}/api/notify`,
     };
 
     const response = await mercadopago.preferences.create(preference);
+
+    const { init_point } = response.body;
+
+    console.log(init_point, "infoo");
 
     return new Response(JSON.stringify({ url: response.body.init_point }), {
       status: 200,
