@@ -1,8 +1,8 @@
 "use client";
-
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { TPlan } from "../types";
+import Link from "next/link";
 
 interface MercadoPagoButtonProps {
   Plan: TPlan;
@@ -34,16 +34,16 @@ const MercadoPagoButton = ({ Plan }: MercadoPagoButtonProps) => {
   return (
     <div>
       {loading ? (
-        <button
-          className='            className="w-[400px] rounded-2xl h-full bg-[#009ee3] p-4 cursor-pointer"
-                    '
-        >
+        <button className="w-[400px] rounded-2xl h-full bg-[#009ee3] p-4 cursor-pointer">
           cargando
         </button>
       ) : (
-        <>
-          <a href={url}>Comprar ahora</a>
-        </>
+        <Link
+          className="w-[400px] rounded-2xl h-full bg-[#009ee3] p-4 cursor-pointer"
+          href={url}
+        >
+          Mercado Pago
+        </Link>
       )}
     </div>
   );
