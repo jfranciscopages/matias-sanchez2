@@ -16,7 +16,7 @@ export interface TPlan {
   short?: boolean;
   usd?: boolean;
   title: string;
-  price: number;
+  price?: number;
   includes: string[];
 }
 
