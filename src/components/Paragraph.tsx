@@ -1,4 +1,4 @@
-import { TParagraph } from "@/types";
+import { TParagraph } from "../types";
 import React from "react";
 
 const Paragraph = ({ title, texts, list }: TParagraph) => {

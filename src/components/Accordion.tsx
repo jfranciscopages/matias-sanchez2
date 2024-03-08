@@ -1,5 +1,5 @@
 "use client";
-import { TAccordion } from "@/types";
+import { TAccordion } from "../types";
 import { useState } from "react";
 
 const AccordionItem = ({ title, content }: TAccordion) => {

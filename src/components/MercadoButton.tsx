@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { TPlan } from "@/types";
+import { TPlan } from "../types";
 
 interface MercadoPagoButtonProps {
   Plan: TPlan;

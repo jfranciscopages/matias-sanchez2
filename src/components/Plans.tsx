@@ -1,6 +1,6 @@
 import React from "react";
 import Plan from "./Plan";
-import { plans } from "@/utils/plans";
+import { plans } from "../utils/plans";
 import Link from "next/link";
 
 const Plans = () => {

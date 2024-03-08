@@ -1,4 +1,4 @@
-import { TButton } from "@/types";
+import { TButton } from "../types";
 import React from "react";
 
 const Button = ({ background, textColor, text }: TButton) => {

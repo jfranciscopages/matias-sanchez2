@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "./Button";
-import { TPlan } from "@/types";
+import { TPlan } from "../types";
 import Link from "next/link";
 
 const Plan = ({ background, title, price, includes, short, usd }: TPlan) => {

@@ -1,7 +1,5 @@
 import React from "react";
-import Button from "./Button";
-import { TPlan } from "@/types";
-import Link from "next/link";
+import { TPlan } from "../types";
 
 const PlanCheckout = ({ background, title, includes }: TPlan) => {
   return (

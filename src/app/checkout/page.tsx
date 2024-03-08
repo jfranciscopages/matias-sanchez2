@@ -4,7 +4,7 @@ import Button from "../../components/Button";
 import { plans } from "../../utils/plans";
 import { useSearchParams } from "next/navigation";
 import PlanCheckout from "../../components/PlanCheckout";
-import MercadoPagoButton from "@/components/MercadoButton";
+import MercadoPagoButton from "../../components/MercadoButton";
 
 const Checkout = () => {
   const searchParams = useSearchParams();

@@ -1,4 +1,4 @@
-import { questions } from "@/utils/questions";
+import { questions } from "../utils/questions";
 import React from "react";
 import AccordionItem from "./Accordion";
 
