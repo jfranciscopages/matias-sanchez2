@@ -6,8 +6,8 @@ mercadopago.configure({
   access_token: process.env.MERCADO_PAGO,
 });
 
-const URL = "https://matiassanchezfit.vercel.app";
-// const URL = "http://localhost:3000";
+// const URL = "https://matiassanchezfit.vercel.app";
+const URL = "http://localhost:3000";
 
 export async function POST(req: NextRequest) {
   const data = await req.json();
@@ -30,6 +30,8 @@ export async function POST(req: NextRequest) {
     };
 
     const response = await mercadopago.preferences.create(preference);
+
+    console.log(response.body);
 
     return new Response(JSON.stringify({ url: response.body.init_point }), {
       status: 200,
