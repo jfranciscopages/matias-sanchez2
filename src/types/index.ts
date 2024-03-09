@@ -17,7 +17,7 @@ export interface TPlan {
   usd?: boolean;
   title: string;
   price?: number;
-  includes: string[];
+  includes?: string[];
 }
 
 export interface TVideo {

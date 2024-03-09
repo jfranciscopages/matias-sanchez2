@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@fontsource/montserrat": "^5.0.17",
+    "@types/mercadopago": "^1.5.11",
     "axios": "^1.6.7",
     "mercadopago": "^1.5.16",
     "next": "14.1.1",

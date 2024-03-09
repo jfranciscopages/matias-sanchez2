@@ -1,14 +1,9 @@
 "use client";
+
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { TPlan } from "../types";
-import Link from "next/link";
 
-interface MercadoPagoButtonProps {
-  Plan: TPlan;
-}
-
-const MercadoPagoButton = ({ Plan }: MercadoPagoButtonProps) => {
+const MercadoPagoButton = ({ planMP }: any) => {
   const [url, setUrl] = useState<null | string>(null);
   const [loading, setLoading] = useState<boolean>(true);
 
@@ -18,7 +13,7 @@ const MercadoPagoButton = ({ Plan }: MercadoPagoButtonProps) => {
 
       try {
         const { data: preference } = await axios.post("/api/checkout", {
-          Plan,
+          planMP,
         });
 
         setUrl(preference.url);
@@ -29,21 +24,26 @@ const MercadoPagoButton = ({ Plan }: MercadoPagoButtonProps) => {
     };
 
     generateLink();
-  }, [Plan]);
+  }, [planMP]);
 
   return (
     <div>
       {loading ? (
-        <button className="w-[400px] rounded-2xl h-full bg-[#009ee3] p-4 cursor-pointer">
-          cargando
+        <button
+          className="w-[400px] bg-blue p-4 rounded-2xl text-white flex justify-center items-center"
+          disabled
+        >
+          <div className="border-white h-5 w-5 animate-spin rounded-full border-4 border-t-blue" />{" "}
         </button>
       ) : (
-        <Link
-          className="w-[400px] rounded-2xl h-full bg-[#009ee3] p-4 cursor-pointer"
-          href={url}
-        >
-          Mercado Pago
-        </Link>
+        <>
+          <a
+            className="w-[400px] cursor-pointer bg-blue p-4 rounded-2xl text-white flex justify-center items-center"
+            href={url}
+          >
+            Comprar ahora
+          </a>
+        </>
       )}
     </div>
   );
