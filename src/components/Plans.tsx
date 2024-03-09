@@ -29,6 +29,7 @@ const Plans = () => {
             title={plan.title}
             background={plan.background}
             short={plan.short}
+            benefits={plan.benefits}
             price={plan.price}
             includes={plan.includes}
             usd={plan.usd}

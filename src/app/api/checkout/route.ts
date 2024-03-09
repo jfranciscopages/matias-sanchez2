@@ -10,12 +10,14 @@ const URL = "https://matiassanchezfit.vercel.app";
 // const URL = "http://localhost:3000";
 
 export async function POST(req: NextRequest) {
+  const data = await req.json();
+
   try {
     const preference: any = {
       items: [
         {
-          title: "prueba",
-          unit_price: 10,
+          title: `Plan ${data.title}`,
+          unit_price: data.price,
           quantity: 1,
         },
       ],

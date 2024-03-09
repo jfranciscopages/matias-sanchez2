@@ -12,10 +12,11 @@ export interface TParagraph {
 }
 
 export interface TPlan {
-  background?: boolean;
+  background?: number;
   short?: boolean;
   usd?: boolean;
   title: string;
+  benefits?: string[];
   price?: number;
   includes?: string[];
 }

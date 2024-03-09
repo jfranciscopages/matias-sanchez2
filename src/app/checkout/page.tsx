@@ -9,7 +9,7 @@ const Checkout = () => {
   const searchParams = useSearchParams();
   const plan = searchParams.get("plan");
   const selectedPlan = plans.find((p) => p.title.toLowerCase() === plan);
-  const { title, background, includes, price } = selectedPlan || {};
+  const { title, background, includes, price, usd } = selectedPlan || {};
   const planMP = { title, price };
 
   return (
@@ -20,6 +20,11 @@ const Checkout = () => {
             Estas por comprar el Plan
           </h2>
           <h3 className="text-black font-bold text-3xl">{title}</h3>
+          <p className="text-black font-bold text-base text-center max-w-[500px] mt-4 opacity-80">
+            * Una vez que realices el pago serás redireccionado a la app donde
+            debes registrarte, en aproximadamente 48 horas recibiras dentro de
+            la app tus planificaciones.
+          </p>
         </div>
         <PlanCheckout
           title={title}
@@ -28,7 +33,7 @@ const Checkout = () => {
         />
         <div className="w-[400px] h-[3px] bg-gray-200"></div>
         <div className="w-full h-full flex justify-center items-center">
-          <MercadoPagoButton plan={selectedPlan} />
+          <MercadoPagoButton plan={planMP} usd={usd} />
         </div>
       </div>
     </section>

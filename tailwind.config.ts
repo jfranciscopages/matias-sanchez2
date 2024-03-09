@@ -9,6 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
+        "plan-3": "url('/imgs/plan3.webp')",
         "plan-2": "url('/imgs/plan2.webp')",
         "plan-1": "url('/imgs/plan1.webp')",
       },

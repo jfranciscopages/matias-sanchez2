@@ -27,7 +27,7 @@ export default function RootLayout({
         <Header />
         <main className="flex min-h-screen w-full flex-col items-center justify-between text-white">
           {children}
-          <div className="fixed bg-blue rounded-full w-20 h-20 p-4 flex justify-center items-center right-4 bottom-4 z-99 cursor-pointer transform transition-all hover:scale-110">
+          <div className="fixed bg-[#25d366] rounded-full w-20 h-20 p-4 flex justify-center items-center right-4 bottom-4 z-99 cursor-pointer transform transition-all hover:scale-110">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 448 512"
