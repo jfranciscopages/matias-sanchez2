@@ -28,7 +28,7 @@ const Checkout = () => {
         />
         <div className="w-[400px] h-[3px] bg-gray-200"></div>
         <div className="w-full h-full flex justify-center items-center">
-          <MercadoPagoButton plan={planMP} />
+          <MercadoPagoButton plan={selectedPlan} />
         </div>
       </div>
     </section>

@@ -2,8 +2,13 @@
 
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { TPlan } from "../types";
 
-const MercadoPagoButton = ({ planMP }: any) => {
+interface MercadoPagoButtonProps {
+  plan: TPlan;
+}
+
+const MercadoPagoButton = ({ plan }: MercadoPagoButtonProps) => {
   const [url, setUrl] = useState<null | string>(null);
   const [loading, setLoading] = useState<boolean>(true);
 
@@ -12,9 +17,7 @@ const MercadoPagoButton = ({ planMP }: any) => {
       setLoading(true);
 
       try {
-        const { data: preference } = await axios.post("/api/checkout", {
-          planMP,
-        });
+        const { data: preference } = await axios.post("/api/checkout", plan);
 
         setUrl(preference.url);
       } catch (error) {
@@ -24,7 +27,7 @@ const MercadoPagoButton = ({ planMP }: any) => {
     };
 
     generateLink();
-  }, [planMP]);
+  }, [plan]);
 
   return (
     <div>
@@ -33,7 +36,7 @@ const MercadoPagoButton = ({ planMP }: any) => {
           className="w-[400px] bg-blue p-4 rounded-2xl text-white flex justify-center items-center"
           disabled
         >
-          <div className="border-white h-5 w-5 animate-spin rounded-full border-4 border-t-blue" />{" "}
+          <div className="border-white h-5 w-5 animate-spin rounded-full border-4 border-t-blue" />
         </button>
       ) : (
         <>
