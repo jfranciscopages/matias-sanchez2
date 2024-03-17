@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Button from "../../components/Button";
 import React, { useState } from "react";
+import axios from "axios";
 
 const ThankYou = () => {
   const handleRegister = () => {
@@ -35,17 +36,20 @@ const ThankYou = () => {
     checkFormCompletion();
   };
 
-  const checkFormCompletion = () => {
-    const { name, email, dni } = values;
-    if (name && email && dni) {
-      setFormComplete(true);
-    } else {
-      setError(true);
-      setFormComplete(false);
+  const checkFormCompletion = async () => {
+    try {
+      const { name, email, dni } = values;
+      if (name && email && dni) {
+        setFormComplete(true);
+        await axios.post("/api/send-mail", { name, email, dni });
+      } else {
+        setError(true);
+        setFormComplete(false);
+      }
+    } catch (e) {
+      console.log(e);
     }
   };
-
-  console.log(values);
 
   return (
     <section

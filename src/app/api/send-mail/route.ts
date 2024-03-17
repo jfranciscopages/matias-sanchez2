@@ -1,19 +1,21 @@
 import { Resend } from "resend";
 import { EmailAdmin } from "../../../components/Emails/EmailAdmin";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 const resend = new Resend(process.env.RESEND_KEY);
 
-export async function POST() {
+export async function POST(request: NextRequest) {
+  const { name, email, dni } = await request.json();
+
   try {
     await resend.emails.send({
       from: "Acme <onboarding@resend.dev>",
       to: ["ignaciofronttest@gmail.com"],
-      subject: `Juanse compró un plan`,
+      subject: `${name} compró un plan`,
       react: EmailAdmin({
-        nombre: "Juanse",
-        email: "juansegundomartinez@gmail.com",
-        dni: "12345678",
+        nombre: name,
+        email: email,
+        dni: dni,
       }),
     });
 
