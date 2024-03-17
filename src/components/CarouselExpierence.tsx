@@ -1,54 +1,29 @@
 "use client";
-import Image from "next/image";
-import { carouselImages } from "../utils/carouselImages";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import Video from "./Video";
+import { experience } from "../utils/experience";
 
-const Carousel = () => {
-  const autoSlideInterval = 2000;
+const ExperienceCarousel = () => {
   const [curr, setCurr] = useState(0);
-  const [autoSlide, setAutoSlide] = useState(true);
 
   const prev = () =>
-    setCurr((curr) => (curr === 0 ? carouselImages.length - 1 : curr - 1));
+    setCurr((curr) => (curr === 0 ? experience.length - 1 : curr - 1));
   const next = () =>
-    setCurr((curr) => (curr === carouselImages.length - 1 ? 0 : curr + 1));
-
-  useEffect(() => {
-    if (autoSlide) {
-      const slideInterval = setInterval(next, autoSlideInterval);
-      return () => clearInterval(slideInterval);
-    }
-  }, [autoSlide]);
-
-  const handleMouseEnter = () => {
-    setAutoSlide(false);
-  };
-
-  const handleMouseLeave = () => {
-    setAutoSlide(true);
-  };
+    setCurr((curr) => (curr === experience.length - 1 ? 0 : curr + 1));
 
   return (
-    <div
-      className="overflow-hidden relative"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-      <div
-        className="flex w-full h-full  lg:w-[1000px] lg:h-[1000px] transition-transform ease-out duration-1200"
-        style={{ transform: `translateX(-${curr * 100}%)` }}
-      >
-        {carouselImages.map((image, index) => (
-          <Image
+    <div className="overflow-hidden relative flex justify-center">
+      <div className="flex w-full h-full max-w-[500px] max-h-full 2xl:max-w-[800px] 2xl:max-h-full transition-transform ease-out duration-1200">
+        {experience.map((item, index) => (
+          <div
             key={index}
-            alt={"index"}
-            src={image}
-            width={1900}
-            height={800}
-          />
+            style={{ display: index === curr ? "block" : "none" }}
+          >
+            <Video source={item.video} height="600" width="500" />
+          </div>
         ))}
       </div>
-      <div className="absolute inset-0 flex items-center justify-between p-4">
+      <div className="absolute w-full h-full max-w-[500px] max-h-[700px] 2xl:max-w-[800px] 2xl:max-h-[1000px] flex items-center justify-between p-4">
         <button
           onClick={prev}
           className="p-2 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
@@ -80,16 +55,15 @@ const Carousel = () => {
           </svg>
         </button>
       </div>
-
       <div className="absolute bottom-4 right-0 left-0">
         <div className="flex items-center justify-center gap-2">
-          {carouselImages.map((_, i) => (
+          {experience.map((_, i) => (
             <div
               key={i}
               className={`
-              transition-all w-3 h-3 bg-white rounded-full
-              ${curr === i ? "p-2" : "bg-opacity-50"}
-            `}
+                transition-all w-3 h-3 bg-white rounded-full
+                ${curr === i ? "p-2" : "bg-opacity-50"}
+              `}
             />
           ))}
         </div>
@@ -98,4 +72,4 @@ const Carousel = () => {
   );
 };
 
-export default Carousel;
+export default ExperienceCarousel;

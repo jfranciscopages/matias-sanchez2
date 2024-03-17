@@ -4,28 +4,23 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col justify-between w-full h-full min-h-[400px]">
-      <div className="w-full bg-ligthblue h-[1px] px-4 md:px-10 lg:px-20 max-w-[1350px] mx-auto"></div>
-      <div className="flex flex-col w-full h-full justify-center items-start md:flex-row md:items-center md:justify-between px-8 my-10 md:my-0 md:h-[134px]">
+    <footer className="flex my-4 flex-col justify-between w-full h-full max-w-[1350px] mx-auto">
+      <div className="w-full flex justify-center items-center px-4 md:px-10 lg:px-20">
+        <div className="w-full bg-ligthblue h-[1px]"></div>
+      </div>
+      <div className="flex flex-col w-full h-full justify-center items-center md:flex-row md:items-center md:justify-between px-8 my-10 md:my-0 md:h-[134px]">
         <Image
           src="/imgs/logo.webp"
           width={1000}
           height={1000}
-          className="w-full h-full max-w-[300px] md:max-w-[340px] lg:max-w-[400px]"
+          className="w-full h-full mt-4 max-w-[300px] md:max-w-[400px] 2xl:max-w-[400px]"
           alt="logo"
         />
-        <div className="w-[300px] flex flex-col gap-3 my-4 md:my-0">
-          <h3 className="text-2xl lg:text-3xl font-extrabold">PLAN</h3>
-          <Link href="/">
-            <p className="text-blue text-base">3 meses</p>
-          </Link>
-          <Link href="/">
-            <p className="text-blue text-base">6 meses</p>
-          </Link>
-        </div>
-        <div className="w-[300px] my-4 md:my-0">
-          <h3 className="text-2xl lg:text-3xl font-extrabold">Redes</h3>
-          <div className="flex gap-3 my-4">
+        <div className="w-[420px] my-4 md:my-0 flex flex-col md:flex-row items-center justify-center gap-5">
+          <h3 className="text-center md:text-left text-lg 2xl:text-2xl lg:text-3xl font-extrabold ">
+            Redes
+          </h3>
+          <div className="flex justify-center md:justify-start gap-3 my-4">
             <div className="bg-ligthblue text-white rounded-full w-12 h-12 flex flex-col justify-center items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -64,9 +59,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="bg-ligthblue w-full h-[80px] flex justify-center items-center">
-        <p className="font-bold text-2xl">© MATIAS SANCHEZ FIT</p>
       </div>
     </footer>
   );

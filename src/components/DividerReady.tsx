@@ -4,12 +4,12 @@ import ScrollLink from "./SmoothLink";
 
 const DividerReady = () => {
   return (
-    <section className="w-full h-[340px] bg-ligthblue flex flex-col items-center justify-center gap-10 my-10">
+    <section className="w-full h-full py-5  md:h-[340px] bg-ligthblue flex flex-col items-center justify-center gap-5 md:gap-10 my-10">
       <div className="flex flex-col justify-center items-center">
         <p className="text-xl md:text-3xl font-extrabold">
           Si ellos lo LOGRARON
         </p>
-        <p className="text-xl md:text-3xl font-extrabold">
+        <p className="text-center text-xl md:text-3xl font-extrabold">
           es porque vos también podes hacerlo.
         </p>
       </div>

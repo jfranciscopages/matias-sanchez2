@@ -16,6 +16,7 @@ const config: Config = {
       colors: {
         blue: "rgb(41, 105, 176)",
         ligthblue: "rgba(41, 105, 176, 1)",
+        paypal: "#1e477a",
       },
       animation: {
         "fade-in": "fade-in 0.6s ease-in",

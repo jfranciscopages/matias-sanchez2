@@ -50,11 +50,13 @@ export const plans = [
     title: "ASESORIA 1-1",
     price: 200,
     includes: [
-      "Plan de entrenamiento a tu medida",
-      "Acceso a la comunidad",
-      "Guía  de alimentación para perder grasa corporal",
-      "Guía de alimentación para aumenter masa muscular",
-      "Llamadas grupales semanales",
+      "Entrevista 1-1 conmigo",
+      "Consulta nutricional online con Lic. Juan Elias Perez",
+      "Reportes diarios, semanales y mensuales",
+      "Seguimiento 24/7 por WhatsApp",
+      "Llamadas semanales individuales",
+      "Grupo Whatsapp VIP",
+      "Mentorias semanales en VIVO",
     ],
   },
 ];

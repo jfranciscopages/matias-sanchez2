@@ -18,7 +18,7 @@ const Video = ({ source, width, height, experience }: TVideo) => {
       </video>
       <button
         onClick={() => setMuted(!muted)}
-        className="absolute top-[10px] right-[10px] md:top-[20px] md:right-[20px] rounded-full p-2 lg:p-4 bg-black border-none cursor-pointer"
+        className="z-[99] absolute top-[10px] right-[10px] md:top-[20px] md:right-[20px] rounded-full p-2 lg:p-4 bg-black border-none cursor-pointer"
       >
         {muted ? (
           <svg

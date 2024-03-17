@@ -57,7 +57,7 @@ const MercadoPagoButton = ({ plan, usd }: MercadoPagoButtonProps) => {
               className="w-[400px] cursor-pointer bg-blue p-4 rounded-2xl text-white flex justify-center items-center"
               href={url}
             >
-              Comprar ahora
+              Mercado Pago
             </a>
           )}
         </>

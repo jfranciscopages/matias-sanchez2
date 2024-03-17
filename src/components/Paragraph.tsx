@@ -13,19 +13,22 @@ const Paragraph = ({ title, texts, list }: TParagraph) => {
             />
           </svg>
         </div>
-        <h3 className="font-extrabold text-xl md:text-2xl lg:text-3xl my-2">
+        <h3 className="font-extrabold text-xl md:text-2xl 2xl:text-3xl my-2">
           {title}
         </h3>
       </div>
       <div>
         {texts.map((text, index) => (
-          <p key={index} className="font-medium text-base text-left my-4">
+          <p
+            key={index}
+            className="font-medium text-sm 2xl:text-base text-left my-4"
+          >
             {text}
           </p>
         ))}
         {list && (
           <>
-            <h3 className="font-medium text-lg  my-4 text-center">Además</h3>
+            <h3 className="font-medium text-lg my-4 text-center">Además</h3>
             <ul className="pl-4 list-disc">
               {list.map((text, index) => (
                 <li
