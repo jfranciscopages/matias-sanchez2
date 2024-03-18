@@ -9,6 +9,7 @@ import Experience from "../components/Experience";
 import FAQ from "../components/FAQ";
 import ScrollLink from "../components/SmoothLink";
 import Image from "next/image";
+import path from "path";
 
 export default function Home() {
   return (
@@ -24,7 +25,7 @@ export default function Home() {
         </h2>
         <div className="md:my-10">
           <Video
-            source="/videos/video-presentacion.mp4"
+            source={"/videos/video-presentacion.mov"}
             width="lg:max-w-[1000px] 2xl:max-w-[1400px]"
             height="max-h-[630px]"
           />
@@ -44,7 +45,7 @@ export default function Home() {
       <section className="flex flex-col items-center justify-start my-14 px-4 md:px-10 lg:px-20 max-w-[1350px] mx-auto">
         <div className="md:my-10">
           <Video
-            source="/videos/video-aplicacion.mp4"
+            source={"/videos/video-aplicacion.mp4"}
             width="lg:max-w-[1000px] 2xl:max-w-[1400px]"
             height="max-h-[630px]"
           />
