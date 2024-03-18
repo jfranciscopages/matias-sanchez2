@@ -45,7 +45,7 @@ export default function Home() {
       <section className="flex flex-col items-center justify-start my-14 px-4 md:px-10 lg:px-20 max-w-[1350px] mx-auto">
         <div className="md:my-10">
           <Video
-            source={"/videos/video-aplicacion.mp4"}
+            source={"/videos/video-aplicacion.mov"}
             width="lg:max-w-[1000px] 2xl:max-w-[1400px]"
             height="max-h-[630px]"
           />

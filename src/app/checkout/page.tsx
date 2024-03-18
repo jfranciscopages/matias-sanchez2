@@ -3,14 +3,12 @@ import React from "react";
 import { plans } from "../../utils/plans";
 import PlanCheckout from "../../components/PlanCheckout";
 import { useSearchParams } from "next/navigation";
-import MercadoPagoButton from "../../components/MercadoButton";
 
 const Checkout = () => {
   const searchParams = useSearchParams();
   const plan = searchParams.get("plan");
   const selectedPlan = plans.find((p) => p.title.toLowerCase() === plan);
-  const { title, background, includes, price, usd } = selectedPlan || {};
-  const planMP = { title, price };
+  const { title, background, includes } = selectedPlan || {};
 
   const handleSubmit = () => {
     window.location.href =
@@ -38,7 +36,6 @@ const Checkout = () => {
         />
         <div className="w-[400px] h-[3px] bg-gray-200"></div>
         <div className="w-full h-full flex-col flex gap-5 justify-center items-center">
-          {/* <MercadoPagoButton plan={planMP} usd={usd} /> */}
           <button
             onClick={handleSubmit}
             className="w-[400px] cursor-pointer bg-blue p-4 rounded-2xl text-white flex justify-center items-center"
