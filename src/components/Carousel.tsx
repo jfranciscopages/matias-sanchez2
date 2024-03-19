@@ -35,7 +35,7 @@ const Carousel = () => {
       onMouseLeave={handleMouseLeave}
     >
       <div
-        className="flex w-full h-full  lg:w-[1000px] lg:h-[1000px] transition-transform ease-out duration-1200"
+        className="flex w-full h-full  lg:w-[800px] lg:h-[600px] transition-transform ease-out duration-1200"
         style={{ transform: `translateX(-${curr * 100}%)` }}
       >
         {carouselImages.map((image, index) => (
@@ -43,8 +43,8 @@ const Carousel = () => {
             key={index}
             alt={"index"}
             src={image}
-            width={1900}
-            height={800}
+            width={1000}
+            height={600}
           />
         ))}
       </div>

@@ -1,8 +1,9 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { plans } from "../../utils/plans";
 import PlanCheckout from "../../components/PlanCheckout";
 import { useSearchParams } from "next/navigation";
+import Image from "next/image";
 
 const Checkout = () => {
   const searchParams = useSearchParams();
@@ -10,9 +11,49 @@ const Checkout = () => {
   const selectedPlan = plans.find((p) => p.title.toLowerCase() === plan);
   const { title, background, includes } = selectedPlan || {};
 
+  const [subscriptionID, setSubscriptionID] = useState(null);
+
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src =
+      "https://www.paypal.com/sdk/js?client-id=AY_ldYCx8wa4sOKtAanu3PmU5cmQF6aoKB7P_kIuYNgla4DiQZp9JSR7dmbenPTcCS1sq7P7ImoaaC2h&vault=true&intent=subscription";
+    script.async = true;
+    script.onload = () => {
+      // Render PayPal button after script is loaded
+      renderPayPalButton();
+    };
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
+  const renderPayPalButton = () => {
+    window.paypal
+      .Buttons({
+        style: {
+          shape: "",
+          color: "gold",
+          layout: "vertical",
+          label: "paypal",
+        },
+        createSubscription: function (data, actions) {
+          return actions.subscription.create({
+            plan_id: "P-9HD84983HF850203MMX4PQ3Y",
+          });
+        },
+        onApprove: function (data, actions) {
+          alert("Gracias por tu compra, ahora seras redirigido a la pagina");
+          document.location.href = "http://matisanchezsorondo.com/thank-you";
+        },
+      })
+      .render("#paypal-button-container");
+  };
+
   const handleSubmit = () => {
     window.location.href =
-      "https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c9380848df5820d018df9dd0f760560";
+      "https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c9380848df5820d018df9dd0f760560"; // Update this with the appropriate action for Mercado Pago
   };
 
   return (
@@ -35,17 +76,20 @@ const Checkout = () => {
           includes={includes}
         />
         <div className="w-[400px] h-[3px] bg-gray-200"></div>
-        <div className="w-full h-full flex-col flex gap-5 justify-center items-center">
-          <button
-            onClick={handleSubmit}
-            className="w-[400px] cursor-pointer bg-blue p-4 rounded-2xl text-white flex justify-center items-center"
-          >
-            Mercado Pago
-          </button>
-          <button className="w-[400px] cursor-pointer bg-paypal p-4 rounded-2xl text-white flex justify-center items-center">
-            Paypal
-          </button>
-        </div>
+        <div id="paypal-button-container" className="w-[400px] h-full"></div>
+        <button
+          onClick={handleSubmit}
+          className="w-[400px] cursor-pointer bg-blue p-3 rounded-md text-white flex justify-center items-center"
+        >
+          Mercado Pago
+          <Image
+            src="/imgs/mercadopago.png"
+            width="30"
+            height="30"
+            alt="mercadopago"
+            className="ml-2"
+          />
+        </button>
       </div>
     </section>
   );
