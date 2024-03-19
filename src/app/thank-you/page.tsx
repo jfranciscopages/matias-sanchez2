@@ -41,15 +41,18 @@ const ThankYou = () => {
       const { name, email, dni } = values;
       if (name && email && dni) {
         setFormComplete(true);
-        await axios.post("/api/send-mail", { name, email, dni });
+        await axios.post("/api/send-mail-user", { name });
+        await axios.post("/api/send-mail-admin", { name, email, dni });
       } else {
-        setError(true);
+        // setError(true);
         setFormComplete(false);
       }
     } catch (e) {
       console.log(e);
     }
   };
+
+  const isButtonDisabled = !(values.name && values.email && values.dni);
 
   return (
     <section
@@ -104,7 +107,10 @@ const ThankYou = () => {
             />
             <button
               type="submit"
-              className="w-full italic rounded-[60px] font-bold bg-black text-white py-2 animate-fade-in transform transition duration-500  hover:scale-110"
+              disabled={isButtonDisabled}
+              className={`w-full italic rounded-[60px] font-bold bg-black text-white py-2 animate-fade-in transform transition duration-500 hover:scale-110 ${
+                isButtonDisabled ? "opacity-70 cursor-not-allowed" : ""
+              }`}
             >
               Enviar
             </button>
