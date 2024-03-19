@@ -23,10 +23,6 @@ const Checkout = () => {
       renderPayPalButton();
     };
     document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
   }, []);
 
   const renderPayPalButton = () => {
