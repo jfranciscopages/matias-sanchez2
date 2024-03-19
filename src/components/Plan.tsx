@@ -2,6 +2,7 @@ import React from "react";
 import Button from "./Button";
 import { TPlan } from "../types";
 import Link from "next/link";
+import Image from "next/image";
 
 const Plan = ({
   background,
@@ -25,7 +26,7 @@ const Plan = ({
           ? "bg-plan-2"
           : "bg-plan-3"
       } relative bg-cover bg-top flex flex-col justify-between items-center w-full min-w-[350px] sm:min-w-[400px] lg:min-w-[340px] 2xl:min-w-[380px] h-full ${
-        short ? "min-h-[900px]" : "min-h-[1000px]"
+        short ? "min-h-[920px]" : "min-h-[1000px]"
       } rounded-2xl border border-white`}
     >
       <div
@@ -45,6 +46,20 @@ const Plan = ({
                 ${price}
               </p>
               <p className="text-xl 2xl:text-xl font-medium ">USD/mensual*</p>
+              <div className="flex justify-center items-center gap-2 opacity-80">
+                <Image
+                  src="/imgs/mercadopago.png"
+                  width={30}
+                  height={30}
+                  alt="mercadopago"
+                />
+                <Image
+                  src="/imgs/paypal.png"
+                  width={30}
+                  height={30}
+                  alt="paypal"
+                />
+              </div>
             </>
           ) : (
             <>
@@ -52,6 +67,20 @@ const Plan = ({
                 ${(price / 1000).toFixed(3).replace(".", ",")}
               </p>
               <p className="text-xl 2xl:text font-medium ">mensual*</p>
+              <div className="flex justify-center items-center gap-2 opacity-80">
+                <Image
+                  src="/imgs/mercadopago.png"
+                  width={30}
+                  height={30}
+                  alt="mercadopago"
+                />
+                <Image
+                  src="/imgs/paypal.png"
+                  width={30}
+                  height={30}
+                  alt="paypal"
+                />
+              </div>
             </>
           )}
         </div>

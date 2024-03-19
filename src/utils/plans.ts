@@ -4,7 +4,7 @@ export const plans = [
     short: true,
     usd: false,
     title: "MASA MUSCULAR",
-    price: 36000,
+    price: 33333,
     benefits: [
       "Más musculo y menos grasa",
       "Definición muscular y tonificación",
@@ -25,7 +25,7 @@ export const plans = [
     short: false,
     usd: false,
     title: "QUEMAR GRASA Y TONIFICAR",
-    price: 36000,
+    price: 33333,
     benefits: [
       "Chau grasa e inflamación",
       "Aumento de energía",
