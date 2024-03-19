@@ -11,6 +11,7 @@ const Video = ({ source, width, height, experience }: TVideo) => {
         autoPlay
         muted={muted}
         loop
+        playsInline
         className={`rounded-[30px] md:rounded-[60px] w-full h-full ${height} ${width}`}
       >
         <source src={source} type="video/mp4" />

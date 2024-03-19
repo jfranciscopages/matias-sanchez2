@@ -5,6 +5,12 @@ import PlanCheckout from "../../components/PlanCheckout";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 
+declare global {
+  interface Window {
+    paypal?: any;
+  }
+}
+
 const Checkout = () => {
   const searchParams = useSearchParams();
   const plan = searchParams.get("plan");
@@ -19,32 +25,33 @@ const Checkout = () => {
       "https://www.paypal.com/sdk/js?client-id=AY_ldYCx8wa4sOKtAanu3PmU5cmQF6aoKB7P_kIuYNgla4DiQZp9JSR7dmbenPTcCS1sq7P7ImoaaC2h&vault=true&intent=subscription";
     script.async = true;
     script.onload = () => {
-      // Render PayPal button after script is loaded
       renderPayPalButton();
     };
     document.body.appendChild(script);
   }, []);
 
   const renderPayPalButton = () => {
-    window.paypal
-      .Buttons({
-        style: {
-          shape: "",
-          color: "gold",
-          layout: "vertical",
-          label: "paypal",
-        },
-        createSubscription: function (data, actions) {
-          return actions.subscription.create({
-            plan_id: "P-9HD84983HF850203MMX4PQ3Y",
-          });
-        },
-        onApprove: function (data, actions) {
-          alert("Gracias por tu compra, ahora seras redirigido a la pagina");
-          document.location.href = "http://matisanchezsorondo.com/thank-you";
-        },
-      })
-      .render("#paypal-button-container");
+    if (window.paypal) {
+      window.paypal
+        .Buttons({
+          style: {
+            shape: "",
+            color: "gold",
+            layout: "vertical",
+            label: "paypal",
+          },
+          createSubscription: function (data, actions) {
+            return actions.subscription.create({
+              plan_id: "P-9HD84983HF850203MMX4PQ3Y",
+            });
+          },
+          onApprove: function (data, actions) {
+            alert("Gracias por tu compra, ahora serás redirigido a la página");
+            document.location.href = "http://matisanchezsorondo.com/thank-you";
+          },
+        })
+        .render("#paypal-button-container");
+    }
   };
 
   const handleSubmit = () => {

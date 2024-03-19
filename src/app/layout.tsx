@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import LoaderLogic from "./LoaderLogic";
 
 export const metadata: Metadata = {
   title: "Matías Sanchez Sorondo",
@@ -19,6 +18,7 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link rel="icon" href="./icon.ico" sizes="any" />
         <link
           href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
           rel="stylesheet"
@@ -27,7 +27,7 @@ export default function RootLayout({
       <body className="text-white">
         <Header />
         <main className="flex w-full flex-col items-center justify-between text-white">
-          <LoaderLogic>{children}</LoaderLogic>
+          {children}
         </main>
         <Footer />
       </body>
