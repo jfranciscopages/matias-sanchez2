@@ -80,7 +80,7 @@ const title = {
   fontSize: "22px",
   color: "#000",
   fontWeight: "bold",
-  textAlign: "center",
+  textAlign: "center" as const,
 };
 
 const logo = {
@@ -93,7 +93,7 @@ const logo = {
 const paragraph = {
   fontSize: "16px",
   lineHeight: "26px",
-  textAlign: "center",
+  textAlign: "center" as const,
   color: "#000",
   fontWeight: "bold",
 };
