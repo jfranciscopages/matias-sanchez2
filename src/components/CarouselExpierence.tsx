@@ -19,7 +19,12 @@ const ExperienceCarousel = () => {
             key={index}
             style={{ display: index === curr ? "block" : "none" }}
           >
-            <Video source={item.video} height="600" width="500" />
+            <Video
+              source={item.video}
+              height="600"
+              width="500"
+              mutedVideo={index !== curr}
+            />
           </div>
         ))}
       </div>

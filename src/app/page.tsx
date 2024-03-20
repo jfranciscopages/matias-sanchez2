@@ -9,7 +9,7 @@ import Experience from "../components/Experience";
 import FAQ from "../components/FAQ";
 import ScrollLink from "../components/SmoothLink";
 import Image from "next/image";
-import path from "path";
+import Player from "../components/Player";
 
 export default function Home() {
   return (
@@ -23,50 +23,58 @@ export default function Home() {
             a través del fitness, hábitos y un entorno positivo
           </span>
         </h2>
-        <div className="md:my-10">
-          <Video
-            source={"/videos/video-presentacion.mov"}
+        <div className="flex flex-col justify-center items-center gap-4 md:mt-10">
+          <Player src={"/videos/video-presentacion.webm"} />
+          {/* <Video
             width="lg:max-w-[1000px] 2xl:max-w-[1400px]"
             height="max-h-[630px]"
-          />
+          /> */}
+          <ScrollLink href="#planes">
+            <Button
+              background="bg-white"
+              textColor="text-black"
+              text="quiero comenzar ahora"
+            />
+          </ScrollLink>
         </div>
-        <ScrollLink href="#planes">
-          <Button
-            background="bg-white"
-            textColor="text-black"
-            text="quiero comenzar ahora"
-          />
-        </ScrollLink>
       </section>
       <div className="h-[40px] w-full flex justify-center items-center px-4 md:px-10 lg:px-20 max-w-[1350px] mx-auto">
         <div className="divider"></div>
       </div>
       <Plans />
       <section className="flex flex-col items-center justify-start my-14 px-4 md:px-10 lg:px-20 max-w-[1350px] mx-auto">
-        <div className="md:my-10">
-          <Video
-            source={"/videos/video-aplicacion.mov"}
+        <div className="flex flex-col justify-center items-center gap-4">
+          <Player src={"/videos/video-aplicacion.mov"} />
+          {/* <Video
+            source={""}
             width="lg:max-w-[1000px] 2xl:max-w-[1400px]"
             height="max-h-[630px]"
-          />
+          /> */}
+          <ScrollLink href="#planes">
+            <Button
+              background="bg-white"
+              textColor="text-black"
+              text="quiero comenzar ahora"
+            />
+          </ScrollLink>
         </div>
-        <ScrollLink href="#planes">
-          <Button
-            background="bg-white"
-            textColor="text-black"
-            text="quiero comenzar ahora"
-          />
-        </ScrollLink>
+
         <div className=" w-full h-full px-5">
           {paragraph.map((info, index) => (
             <div
               key={index}
-              className="my-20 flex flex-col md:flex-row items-center"
+              className="my-20 flex flex-col md:flex-row items-start"
             >
               <div className="flex flex-col items-center ">
                 <Image
                   alt="mobile"
-                  src={index === 0 ? "/imgs/mobile.png" : "/imgs/nutricion.png"}
+                  src={
+                    index === 0
+                      ? "/imgs/mobile.png"
+                      : index === 1
+                      ? "/imgs/nutricion.png"
+                      : "/imgs/comunidad.png"
+                  }
                   width={370}
                   height={480}
                   className="image-filter"
@@ -93,7 +101,7 @@ export default function Home() {
       <section className="flex w-full flex-col items-center justify-start my-14 px-4 md:px-10 lg:px-20 max-w-[1350px] mx-auto">
         <Carousel />
       </section>
-      <DividerReady />
+      <DividerReady ready />
       <div className="h-[40px] w-full flex justify-center items-center px-4 md:px-10 lg:px-20 max-w-[1350px]">
         <div className="divider"></div>
       </div>

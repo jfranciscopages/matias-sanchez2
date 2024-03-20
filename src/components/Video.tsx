@@ -1,9 +1,31 @@
 "use client";
 import { TVideo } from "../types";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
-const Video = ({ source, width, height, experience }: TVideo) => {
+const Video = ({ source, width, height, mutedVideo }: TVideo) => {
   const [muted, setMuted] = useState(true);
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    if (mutedVideo) {
+      console.log("Muted video");
+      if (videoRef.current) {
+        videoRef.current.pause();
+        videoRef.current.currentTime = 0;
+        videoRef.current.play();
+        setMuted(true);
+      }
+    }
+  }, [mutedVideo, muted]);
+
+  const toggleMute = () => {
+    setMuted(!muted);
+    if (muted && videoRef.current) {
+      videoRef.current.pause();
+      videoRef.current.currentTime = 0;
+      videoRef.current.play();
+    }
+  };
 
   return (
     <div className="relative w-auto">
@@ -12,13 +34,14 @@ const Video = ({ source, width, height, experience }: TVideo) => {
         muted={muted}
         loop
         playsInline
+        ref={videoRef}
         className={`rounded-[30px] md:rounded-[60px] w-full h-full ${height} ${width}`}
       >
         <source src={source} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <button
-        onClick={() => setMuted(!muted)}
+        onClick={toggleMute}
         className="z-[99] absolute top-[10px] right-[10px] md:top-[20px] md:right-[20px] rounded-full p-2 lg:p-4 bg-black border-none cursor-pointer"
       >
         {muted ? (
@@ -36,7 +59,7 @@ const Video = ({ source, width, height, experience }: TVideo) => {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 576 512"
-            className="w-8 h-8"
+            className="w-4 h-4 lg:w-8 lg:h-8"
           >
             <path
               fill="#ffffff"

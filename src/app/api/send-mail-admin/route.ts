@@ -9,8 +9,8 @@ export async function POST(request: NextRequest) {
 
   try {
     await resend.emails.send({
-      from: "Acme <onboarding@resend.dev>",
-      to: ["ignaciofronttest@gmail.com"],
+      from: "admin@matisanchezsorondo.com",
+      to: ["juansegundomartinez7@gmail.com"],
       subject: `Mati! ${name} se ha unido al equipo!`,
       react: EmailAdmin({
         user: name,

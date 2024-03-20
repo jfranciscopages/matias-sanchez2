@@ -46,20 +46,9 @@ const Plan = ({
                 ${price}
               </p>
               <p className="text-xl 2xl:text-xl font-medium ">USD/mensual*</p>
-              <div className="flex justify-center items-center gap-2 opacity-80 my-2">
-                <Image
-                  src="/imgs/mercadopago.png"
-                  width={20}
-                  height={20}
-                  alt="mercadopago"
-                />
-                <Image
-                  src="/imgs/paypal.png"
-                  width={20}
-                  height={20}
-                  alt="paypal"
-                />
-              </div>
+              <p className="text-xs font-medium text-center">
+                (Estadía minima 3 meses)
+              </p>
             </>
           ) : (
             <>
@@ -81,6 +70,9 @@ const Plan = ({
                   alt="paypal"
                 />
               </div>
+              <p className="text-xs font-medium text-center">
+                (Estadía minima 3 meses)
+              </p>
             </>
           )}
         </div>

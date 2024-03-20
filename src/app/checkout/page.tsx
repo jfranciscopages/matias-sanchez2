@@ -17,8 +17,6 @@ const Checkout = () => {
   const selectedPlan = plans.find((p) => p.title.toLowerCase() === plan);
   const { title, background, includes } = selectedPlan || {};
 
-  const [subscriptionID, setSubscriptionID] = useState(null);
-
   useEffect(() => {
     const script = document.createElement("script");
     script.src =
@@ -63,10 +61,10 @@ const Checkout = () => {
     <section className="background_w_image w-full flex flex-col items-center justify-center gap-5 md:gap-0 md:justify-between px-4 md:px-10 lg:px-20 max-w-[1350px] mx-auto">
       <div className=" p-6 w-full bg-white rounded-2xl flex flex-col items-center justify-center gap-10">
         <div className="flex flex-col justify-center items-center ">
-          <h2 className="text-black font-bold text-2xl">
+          <h2 className="text-black font-bold text-2xl text-center">
             Estas por suscribirte al Plan
           </h2>
-          <h3 className="text-black font-bold text-3xl">{title}</h3>
+          <h3 className="text-black font-bold text-3xl text-center">{title}</h3>
           <p className="text-black font-bold text-base text-center max-w-[500px] mt-4 opacity-80">
             * Una vez que realices el pago serás redireccionado a la app donde
             debes registrarte, en aproximadamente 48 horas recibiras dentro de
@@ -78,11 +76,9 @@ const Checkout = () => {
           background={background}
           includes={includes}
         />
-        <div className="w-[400px] h-[3px] bg-gray-200"></div>
-        <div id="paypal-button-container" className="w-[400px] h-full"></div>
         <button
           onClick={handleSubmit}
-          className="w-[400px] cursor-pointer bg-blue p-3 rounded-md text-white flex justify-center items-center"
+          className="w-full max-w-[400px] cursor-pointer bg-blue p-3 rounded-md text-white flex justify-center items-center"
         >
           Mercado Pago
           <Image
@@ -93,6 +89,11 @@ const Checkout = () => {
             className="ml-2"
           />
         </button>
+        <div className=" w-[300px] h-[3px] bg-gray-200"></div>
+        <div
+          id="paypal-button-container"
+          className="w-full max-w-[400px] h-full"
+        ></div>
       </div>
     </section>
   );

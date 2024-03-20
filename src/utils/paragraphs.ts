@@ -15,8 +15,15 @@ export const paragraph = [
     list: [
       "Lista de compras para organizar las comidas",
       "Recetario de postres fit",
-      "Guía Melp-Prep",
+      "Guía Meal-Prep",
       "Guía de suplementación",
+    ],
+  },
+  {
+    title: "COMUNIDAD PRIVADA",
+    texts: [
+      "Motivación diaria",
+      "Olvidate de sentirte solo, de no tener motivación. En nuestro grupo de WhatsApp privado nos ayudamos entre todos, un ENTORNO realmente positivo, donde compartimos recetas, ejercicios, motivación, todo lo que necesitas para transformar tu vida sin fallar.",
     ],
   },
 ];

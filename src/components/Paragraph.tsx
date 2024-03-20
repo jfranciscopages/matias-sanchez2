@@ -28,7 +28,7 @@ const Paragraph = ({ title, texts, list }: TParagraph) => {
         ))}
         {list && (
           <>
-            <h3 className="font-medium text-lg my-4 text-center">Además</h3>
+            <h3 className="font-medium text-lg my-4 text-left">Además</h3>
             <ul className="pl-4 list-disc">
               {list.map((text, index) => (
                 <li

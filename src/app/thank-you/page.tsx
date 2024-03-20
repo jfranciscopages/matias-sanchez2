@@ -41,7 +41,7 @@ const ThankYou = () => {
       const { name, email, dni } = values;
       if (name && email && dni) {
         setFormComplete(true);
-        await axios.post("/api/send-mail-user", { name });
+        await axios.post("/api/send-mail-user", { name, email });
         await axios.post("/api/send-mail-admin", { name, email, dni });
       } else {
         // setError(true);
@@ -67,12 +67,12 @@ const ThankYou = () => {
         alt="image"
         width={1000}
         height={1000}
-        className="w-full max-w-[400px] rounded-xl"
+        className="hidden md:block w-full max-w-[400px] rounded-xl"
       />
       {!formComplete ? (
         <div className="w-full h-full flex flex-col justify-center items-center gap-5">
           <div className="w-full text-center flex flex-col gap-2">
-            <h3 className="font-bold text-2xl">
+            <h3 className="font-bold text-xl md:text-2xl">
               Antes de mostrarte los links necesitamos pedirte unos datos
               adicionales
             </h3>

@@ -40,7 +40,7 @@ const Plans = () => {
           />
         ))}
       </div>
-      <div
+      {/* <div
         onClick={handleRedirect}
         className="cursor-pointer flex flex-col justify-center items-center opacity-60"
       >
@@ -48,7 +48,7 @@ const Plans = () => {
         <h3 className="text-xl font-semibold text-ligthblue">
           ¡Mandame un Whatsapp!
         </h3>
-      </div>
+      </div> */}
     </section>
   );
 };
