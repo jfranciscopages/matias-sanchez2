@@ -28,12 +28,14 @@ const Paragraph = ({ title, texts, list }: TParagraph) => {
         ))}
         {list && (
           <>
-            <h3 className="font-medium text-lg my-4 text-left">Además</h3>
+            <h3 className="font-medium text-sm 2xl:text-base my-4 text-left">
+              Además
+            </h3>
             <ul className="pl-4 list-disc">
               {list.map((text, index) => (
                 <li
                   key={index}
-                  className="bullets font-medium text-base text-left my-4"
+                  className="bullets font-medium text-sm 2xl:text-base text-left my-4"
                 >
                   {text}
                 </li>

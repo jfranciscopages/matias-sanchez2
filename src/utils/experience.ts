@@ -6,13 +6,13 @@ export const experience = [
   },
   {
     experience: true,
-    name: "Valentin",
-    video: "/videos/video-valentin.webm",
+    name: "Agustín",
+    video: "/videos/video-agustin.webm",
   },
   {
     experience: true,
-    name: "Agustín",
-    video: "/videos/video-agustin.webm",
+    name: "Valentin",
+    video: "/videos/video-valentin.webm",
   },
   {
     experience: true,

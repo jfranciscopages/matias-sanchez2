@@ -1,6 +1,6 @@
 "use client";
 import ReactPlayer from "react-player";
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 
 interface VideoPlayerProps {
   src: string;
@@ -16,7 +16,7 @@ const Player: React.FC<VideoPlayerProps> = ({ src }) => {
   }, []);
 
   return (
-    <div>
+    <Suspense fallback={<p>Loading feed...</p>}>
       {hasWindow && (
         <div className="rounded-[30px]">
           <ReactPlayer
@@ -31,7 +31,7 @@ const Player: React.FC<VideoPlayerProps> = ({ src }) => {
           />
         </div>
       )}
-    </div>
+    </Suspense>
   );
 };
 
