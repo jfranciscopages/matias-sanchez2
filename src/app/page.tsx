@@ -40,7 +40,7 @@ export default function Home() {
       <Plans />
       <section className="flex flex-col items-center justify-start my-14 px-4 md:px-10 lg:px-20 max-w-[1350px] mx-auto">
         <div className="flex flex-col justify-center items-center gap-4">
-          <Player src={"/videos/video-aplicacion.webm"} />
+          <Player src={"/videos/video-aplicacion-1.webm"} />
           <ScrollLink href="#planes">
             <Button
               background="bg-white"
