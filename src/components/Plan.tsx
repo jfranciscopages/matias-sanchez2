@@ -47,7 +47,7 @@ const Plan = ({
               </p>
               <p className="text-xl 2xl:text-xl font-medium ">USD/mensual*</p>
               <p className="text-xs font-medium text-center">
-                (Estadía minima 3 meses)
+                (Estadía mínima 3 meses)
               </p>
             </>
           ) : (
@@ -71,7 +71,7 @@ const Plan = ({
                 />
               </div>
               <p className="text-xs font-medium text-center">
-                (Estadía minima 3 meses)
+                (Estadía mínima 3 meses)
               </p>
             </>
           )}
@@ -101,7 +101,7 @@ const Plan = ({
               </div>
             ))}
         </div>
-        <p className="text-lg 2xl:text-xl font-extrabold">¿Que incluye?</p>
+        <p className="text-lg 2xl:text-xl font-extrabold">¿Qué incluye?</p>
         <div className="flex flex-col items-start justify-center">
           {includes.map((include, index) => (
             <div className="w-full h-full flex gap-4 my-2" key={index}>

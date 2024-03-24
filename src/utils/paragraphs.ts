@@ -23,7 +23,7 @@ export const paragraph = [
     title: "COMUNIDAD PRIVADA",
     texts: [
       "Motivación diaria",
-      "Olvidate de sentirte solo, de no tener motivación. En nuestro grupo de WhatsApp privado nos ayudamos entre todos, un ENTORNO realmente positivo, donde compartimos recetas, ejercicios, motivación, todo lo que necesitas para transformar tu vida sin fallar.",
+      "Olvidate de sentirte solo, de no tener motivación. En nuestro grupo de WhatsApp privado nos ayudamos entre todos, un ENTORNO realmente positivo, donde compartimos recetas, ejercicios, motivación, todo lo que necesitás para transformar tu vida sin fallar.",
     ],
   },
 ];

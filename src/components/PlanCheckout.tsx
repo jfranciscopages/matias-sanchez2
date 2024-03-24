@@ -16,7 +16,7 @@ const PlanCheckout = ({ background, title, includes }: TPlan) => {
         className={`absolute w-full p-8 h-full flex flex-col justify-center gap-[50px] items-center bg-[rgba(0,0,0,0.75)] rounded-2xl`}
       >
         <h3 className="text-2xl font-extrabold text-center">{title}</h3>
-        <p className="text-xl font-extrabold">¿Que incluye?</p>
+        <p className="text-xl font-extrabold">¿Qué incluye?</p>
         <div className="flex flex-col items-start justify-center">
           {includes.map((include, index) => (
             <div className="w-full h-full flex gap-4 my-2" key={index}>

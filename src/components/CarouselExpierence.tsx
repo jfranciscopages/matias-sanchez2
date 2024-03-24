@@ -24,6 +24,7 @@ const ExperienceCarousel = () => {
               height="600"
               width="500"
               mutedVideo={index !== curr}
+              autoPlay={true}
             />
             {/* <VimeoPlayer videoId={item.video} /> */}
           </div>

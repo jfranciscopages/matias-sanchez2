@@ -4,9 +4,11 @@ import React, { Suspense, useEffect, useState } from "react";
 
 interface VideoPlayerProps {
   src: string;
+  playing?: boolean;
+  muted?: boolean;
 }
 
-const Player: React.FC<VideoPlayerProps> = ({ src }) => {
+const Player: React.FC<VideoPlayerProps> = ({ src, playing = true, muted = true }) => {
   const [hasWindow, setHasWindow] = useState(false);
 
   useEffect(() => {
@@ -24,10 +26,10 @@ const Player: React.FC<VideoPlayerProps> = ({ src }) => {
             url={src}
             width="100%"
             loop
-            playing
+            playing={playing}
             height="auto"
             controls
-            muted
+            muted={muted}
           />
         </div>
       )}

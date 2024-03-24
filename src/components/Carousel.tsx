@@ -40,12 +40,13 @@ const Carousel = () => {
       >
         {carouselImages.map((image, index) => (
           <Image
-            key={index}
-            alt={"index"}
-            src={image}
-            width={1000}
-            height={600}
-          />
+          key={index}
+          alt={index.toString()}
+          src={image}
+          width={1000}
+          height={600}
+          style={index === 6 ? {marginTop: "100px", marginBottom: "100px"} : null}
+        />
         ))}
       </div>
       <div className="absolute inset-0 flex items-center justify-between p-4">

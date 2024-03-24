@@ -7,4 +7,6 @@ export const carouselImages = [
   "/imgs/foto6.webp",
   "/imgs/foto7.webp",
   "/imgs/foto8.webp",
+  "/imgs/foto9.webp",
+  "/imgs/foto10.webp",
 ];
