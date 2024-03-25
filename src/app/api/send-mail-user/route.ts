@@ -2,7 +2,9 @@ import { Resend } from "resend";
 import EmailUser from "../../../components/Emails/EmailUser";
 import { NextRequest } from "next/server";
 
-const resend = new Resend(process.env.RESEND_KEY);
+// const resend = new Resend(process.env.RESEND_KEY);
+const resend = new Resend("fake_api_key");
+
 
 export async function POST(request: NextRequest) {
   const { name, email } = await request.json();
