@@ -57,7 +57,7 @@ export default function Home() {
             source={"/videos/video-aplicacion-1.webm"}
             height="600"
             width="500"
-            autoPlay={false}
+            autoPlay={true}
             mutedVideo={false}
             styles={borders}
           />
