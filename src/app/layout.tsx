@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
   title: "Matías Sanchez Sorondo",
-  description: "Cambiá tu vida  a través del fitness, hábitos y un entorno positivo",
+  description: "Cambiá tu vida a través del fitness, hábitos y un entorno positivo",
 };
 
 export default function RootLayout({
