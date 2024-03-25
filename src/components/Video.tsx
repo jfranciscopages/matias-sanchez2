@@ -1,22 +1,36 @@
 "use client";
 import { TVideo } from "../types";
-import React, { Suspense, useEffect, useRef, useState } from "react";
+import React, { Suspense, useRef, useState } from "react";
 
-const Video = ({ source, width, height, mutedVideo, autoPlay, styles }: TVideo) => {
+const Video = ({
+  source,
+  width,
+  height,
+  mutedVideo,
+  autoPlay,
+  styles,
+}: TVideo) => {
   const [muted, setMuted] = useState(mutedVideo);
   const videoRef = useRef(null);
+  const isWindowDefined = typeof window !== "undefined";
 
-  // useEffect(() => {
-  //   if (mutedVideo) {
-  //     //console.log("Muted video");
-  //     if (videoRef.current) {
-  //       videoRef.current.pause();
-  //       videoRef.current.currentTime = 0;
-  //       videoRef.current.play();
-  //       setMuted(true);
-  //     }
-  //   }
-  // }, [mutedVideo, muted]);
+  const isMobile = () => {
+    return isWindowDefined && window.innerWidth <= 768;
+  };
+
+  const getStyles = () => {
+    if (isMobile()) {
+      return {
+        border: "2px solid #fff",
+        borderRadius: "30px",
+      };
+    } else {
+      return {
+        border: "3px solid #fff",
+        borderRadius: "60px",
+      };
+    }
+  };
 
   const toggleMute = () => {
     setMuted(!muted);
@@ -46,8 +60,9 @@ const Video = ({ source, width, height, mutedVideo, autoPlay, styles }: TVideo) 
           ref={videoRef}
           className={`rounded-[30px] md:rounded-[60px] w-full h-full ${height} ${width}`}
           onClick={togglePlay}
+          style={getStyles()}
         >
-          <source src={source} type="video/mp4" />
+          <source src={source} type="video/webm" />
           Your browser does not support the video tag.
         </video>
         <button
@@ -82,7 +97,6 @@ const Video = ({ source, width, height, mutedVideo, autoPlay, styles }: TVideo) 
     </Suspense>
   );
 };
-{
-}
+
 
 export default Video;

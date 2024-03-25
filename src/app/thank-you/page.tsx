@@ -108,7 +108,7 @@ const ThankYou = () => {
             <button
               type="submit"
               disabled={isButtonDisabled}
-              className={`w-full italic rounded-[60px] font-bold bg-black text-white py-2 animate-fade-in transform transition duration-500 hover:scale-110 ${
+              className={`w-full rounded-[60px] font-bold bg-black text-white py-2 animate-fade-in transform transition duration-500 hover:scale-110 ${
                 isButtonDisabled ? "opacity-70 cursor-not-allowed" : ""
               }`}
             >
@@ -116,13 +116,13 @@ const ThankYou = () => {
             </button>
           </form>
           <p className="text-sm text-center">
-            Ademas te estaremos mandando un email con los links para que no los
+            Además, ¡te estaremos enviando un email con los links para que no los
             pierdas!
           </p>
           {error && (
             <div className="w-[500px] flex justify-center mb-4 lg:w-[260px] relative text-red-700">
               <p className="italic text-center absolute text-sm">
-                * Debes completar todos los valores antes de enviar
+                * Por favor, completá todos los valores antes de enviar
               </p>
             </div>
           )}
@@ -131,11 +131,11 @@ const ThankYou = () => {
         <>
           <div className="flex flex-col items-center gap-5">
             <h2 className="text-center text-2xl md:text-4xl font-extrabold">
-              ¡Muchas Gracias!
+              ¡Muchas gracias!
             </h2>
             <h3 className="text-center text-lg md:text-2xl  font-extrabold">
-              ¡Ahora tenes que registrarte en nuestra App e ingresar al grupo de
-              Whatsapp!
+              ¡Ahora tenés que registrarte en nuestra app e ingresar al grupo de
+              WhatsApp!
             </h3>
           </div>
           <div className="w-full h-full flex-col md:flex-row flex justify-between my-20">
