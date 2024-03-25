@@ -113,9 +113,9 @@ export default function Home() {
         <Carousel />
       </section>
       <DividerReady ready />
-      <div className="h-[40px] w-full flex justify-center items-center px-4 md:px-10 lg:px-20 max-w-[1350px]">
+      {/* <div className="h-[40px] w-full flex justify-center items-center px-4 md:px-10 lg:px-20 max-w-[1350px]">
         <div className="divider"></div>
-      </div>
+      </div> */}
       <FAQ />
     </>
   );
