@@ -32,18 +32,6 @@ const Video = ({
     }
   };
 
-  // useEffect(() => {
-  //   if (mutedVideo) {
-  //     //console.log("Muted video");
-  //     if (videoRef.current) {
-  //       videoRef.current.pause();
-  //       videoRef.current.currentTime = 0;
-  //       videoRef.current.play();
-  //       setMuted(true);
-  //     }
-  //   }
-  // }, [mutedVideo, muted]);
-
   const toggleMute = () => {
     setMuted(!muted);
     if (muted && videoRef.current) {
@@ -74,7 +62,7 @@ const Video = ({
           onClick={togglePlay}
           style={getStyles()}
         >
-          <source src={source} type="video/mp4" />
+          <source src={source} type="video/webm" />
           Your browser does not support the video tag.
         </video>
         <button
@@ -109,7 +97,6 @@ const Video = ({
     </Suspense>
   );
 };
-{
-}
+
 
 export default Video;

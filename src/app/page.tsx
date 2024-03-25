@@ -9,7 +9,6 @@ import Experience from "../components/Experience";
 import FAQ from "../components/FAQ";
 import ScrollLink from "../components/SmoothLink";
 import Image from "next/image";
-import Player from "../components/Player";
 
 export default function Home() {
   return (
@@ -24,7 +23,6 @@ export default function Home() {
           </span>
         </h2>
         <div className="flex flex-col justify-center items-center gap-4 md:mt-10">
-          {/* <Player src={"/videos/video-presentacion.webm"} playing={true} muted={false} /> */}
           <Video
             source={"/videos/video-presentacion.webm"}
             height="600"
@@ -41,13 +39,9 @@ export default function Home() {
           </ScrollLink>
         </div>
       </section>
-      <div className="h-[40px] w-full flex justify-center items-center px-4 md:px-10 lg:px-20 max-w-[1350px] mx-auto">
-        <div className="divider"></div>
-      </div>
       <Plans />
       <section className="flex flex-col items-center justify-start my-14 px-4 md:px-10 lg:px-20 max-w-[1350px] mx-auto">
         <div className="flex flex-col justify-center items-center gap-4">
-          {/* <Player src={"/videos/video-aplicacion-1.webm"} playing={false} muted={false} /> */}
           <Video
             source={"/videos/video-aplicacion-1.webm"}
             height="600"
@@ -95,9 +89,6 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <div className="h-[40px] w-full flex justify-center items-center px-4 md:px-10 lg:px-20 max-w-[1350px] mx-auto">
-        <div className="divider"></div>
-      </div>
       <DividerReady />
       <Experience />
       <div className="h-[40px] w-full flex justify-center items-center px-4 md:px-10 lg:px-20 max-w-[1350px] mx-auto">
@@ -107,9 +98,6 @@ export default function Home() {
         <Carousel />
       </section>
       <DividerReady ready />
-      {/* <div className="h-[40px] w-full flex justify-center items-center px-4 md:px-10 lg:px-20 max-w-[1350px]">
-        <div className="divider"></div>
-      </div> */}
       <FAQ />
     </>
   );

@@ -1,16 +1,17 @@
-"use client";
+"use client"
 import React from "react";
+import { vimeoVideos } from "../utils/videos";
 
-const VimeoCarousel = ({ videos }) => {
+const VimeoCarousel = () => {
   const [currentVideoIndex, setCurrentVideoIndex] = React.useState(0);
 
   const nextVideo = () => {
-    setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % videos.length);
+    setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % vimeoVideos.length);
   };
 
   const prevVideo = () => {
     setCurrentVideoIndex((prevIndex) =>
-      prevIndex === 0 ? videos.length - 1 : prevIndex - 1
+      prevIndex === 0 ? vimeoVideos.length - 1 : prevIndex - 1
     );
   };
 
@@ -20,7 +21,7 @@ const VimeoCarousel = ({ videos }) => {
         <iframe
           className="z-10"
           title="vimeo-video"
-          src={`https://player.vimeo.com/video/${videos[currentVideoIndex]}`}
+          src={`https://player.vimeo.com/video/${vimeoVideos[currentVideoIndex]}`}
           width="600"
           height="700"
           allow="autoplay; fullscreen; picture-in-picture"
@@ -30,7 +31,7 @@ const VimeoCarousel = ({ videos }) => {
       <div className="absolute w-full h-full max-w-[500px] max-h-[700px] 2xl:max-w-[800px] 2xl:max-h-[1000px] flex items-center justify-between p-4">
         <button
           onClick={prevVideo}
-          className="p-2 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
+          className="p-2 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white absolute left-0 top-1/2 transform -translate-y-1/2 z-20"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +46,7 @@ const VimeoCarousel = ({ videos }) => {
         </button>
         <button
           onClick={nextVideo}
-          className="p-2 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
+          className="p-2 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white absolute right-0 top-1/2 transform -translate-y-1/2 z-20"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

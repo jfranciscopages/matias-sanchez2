@@ -11,7 +11,7 @@ const Plans = () => {
   return (
     <section
       id="planes"
-      className="background_w_image bg-white w-full flex  flex-col items-center justify-start px-4 md:px-10 lg:px-20 gap-20 max-w-[1200px] mx-auto"
+      className="background_w_image bg-white w-full flex  flex-col items-center justify-start px-4 md:px-10 lg:px-20 gap-20 max-w-[1200px] mx-auto mt-10"
     >
       <div className="flex flex-col justify-center items-center gap-12">
         <div className="w-full flex justify-center">
