@@ -58,7 +58,7 @@ export default function Home() {
             height="600"
             width="500"
             autoPlay={true}
-            mutedVideo={false}
+            mutedVideo={true}
             styles={borders}
           />
           <ScrollLink href="#planes">
