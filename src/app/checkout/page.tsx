@@ -9,6 +9,7 @@ declare global {
   interface Window {
     paypal?: any;
   }
+  
 }
 
 const Checkout = () => {
@@ -19,8 +20,7 @@ const Checkout = () => {
 
   useEffect(() => {
     const script = document.createElement("script");
-    script.src =
-      "https://www.paypal.com/sdk/js?client-id=AY_ldYCx8wa4sOKtAanu3PmU5cmQF6aoKB7P_kIuYNgla4DiQZp9JSR7dmbenPTcCS1sq7P7ImoaaC2h&vault=true&intent=subscription";
+    script.src="https://www.paypal.com/sdk/js?client-id=AY_ldYCx8wa4sOKtAanu3PmU5cmQF6aoKB7P_kIuYNgla4DiQZp9JSR7dmbenPTcCS1sq7P7ImoaaC2h&vault=true&intent=subscription";
     script.async = true;
     script.onload = () => {
       renderPayPalButton();
@@ -42,7 +42,7 @@ const Checkout = () => {
           },
           createSubscription: function (data, actions) {
             return actions.subscription.create({
-              plan_id: "P-9HD84983HF850203MMX4PQ3Y",
+              plan_id: "P-87P375742A328504MMYAZCVQ",
             });
           },
           onApprove: function (data, actions) {
