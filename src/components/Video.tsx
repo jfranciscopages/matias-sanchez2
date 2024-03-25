@@ -1,10 +1,36 @@
 "use client";
 import { TVideo } from "../types";
-import React, { Suspense, useEffect, useRef, useState } from "react";
+import React, { Suspense, useRef, useState } from "react";
 
-const Video = ({ source, width, height, mutedVideo, autoPlay, styles }: TVideo) => {
+const Video = ({
+  source,
+  width,
+  height,
+  mutedVideo,
+  autoPlay,
+  styles,
+}: TVideo) => {
   const [muted, setMuted] = useState(mutedVideo);
   const videoRef = useRef(null);
+  const isWindowDefined = typeof window !== "undefined";
+
+  const isMobile = () => {
+    return isWindowDefined && window.innerWidth <= 768;
+  };
+
+  const getStyles = () => {
+    if (isMobile()) {
+      return {
+        border: "2px solid #fff",
+        borderRadius: "30px",
+      };
+    } else {
+      return {
+        border: "3px solid #fff",
+        borderRadius: "60px",
+      };
+    }
+  };
 
   // useEffect(() => {
   //   if (mutedVideo) {
@@ -46,6 +72,7 @@ const Video = ({ source, width, height, mutedVideo, autoPlay, styles }: TVideo) 
           ref={videoRef}
           className={`rounded-[30px] md:rounded-[60px] w-full h-full ${height} ${width}`}
           onClick={togglePlay}
+          style={getStyles()}
         >
           <source src={source} type="video/mp4" />
           Your browser does not support the video tag.

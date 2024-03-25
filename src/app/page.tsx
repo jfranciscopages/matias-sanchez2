@@ -12,10 +12,6 @@ import Image from "next/image";
 import Player from "../components/Player";
 
 export default function Home() {
-  const borders = {
-    border: "2px solid #fff",
-    borderRadius: "60px" // cambie border-radius por borderRadius
-  };
   return (
     <>
       <section className="background_w_image w-full flex  flex-col items-center justify-center gap-5 md:gap-0 md:justify-between px-4 md:px-10 lg:px-20 max-w-[1350px] mx-auto">
@@ -35,7 +31,6 @@ export default function Home() {
             width="500"
             mutedVideo={true}
             autoPlay={true}
-            styles={borders}
           />
           <ScrollLink href="#planes">
             <Button
@@ -59,7 +54,6 @@ export default function Home() {
             width="500"
             autoPlay={true}
             mutedVideo={true}
-            styles={borders}
           />
           <ScrollLink href="#planes">
             <Button
