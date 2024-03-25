@@ -12,6 +12,10 @@ import Image from "next/image";
 import Player from "../components/Player";
 
 export default function Home() {
+  const borders = {
+    border: "2px solid #fff",
+    borderRadius: "60px" // cambie border-radius por borderRadius
+  };
   return (
     <>
       <section className="background_w_image w-full flex  flex-col items-center justify-center gap-5 md:gap-0 md:justify-between px-4 md:px-10 lg:px-20 max-w-[1350px] mx-auto">
@@ -26,12 +30,13 @@ export default function Home() {
         <div className="flex flex-col justify-center items-center gap-4 md:mt-10">
           {/* <Player src={"/videos/video-presentacion.webm"} playing={true} muted={false} /> */}
           <Video
-              source={"/videos/video-presentacion.webm"}
-              height="600"
-              width="500"
-              mutedVideo={false}
-              autoPlay={true}
-            />
+            source={"/videos/video-presentacion.webm"}
+            height="600"
+            width="500"
+            mutedVideo={false}
+            autoPlay={true}
+            styles={borders}
+          />
           <ScrollLink href="#planes">
             <Button
               background="bg-white"
@@ -49,12 +54,13 @@ export default function Home() {
         <div className="flex flex-col justify-center items-center gap-4">
           {/* <Player src={"/videos/video-aplicacion-1.webm"} playing={false} muted={false} /> */}
           <Video
-              source={"/videos/video-aplicacion-1.webm"}
-              height="600"
-              width="500"
-              autoPlay={false}
-              mutedVideo={false}
-            />
+            source={"/videos/video-aplicacion-1.webm"}
+            height="600"
+            width="500"
+            autoPlay={false}
+            mutedVideo={false}
+            styles={borders}
+          />
           <ScrollLink href="#planes">
             <Button
               background="bg-white"

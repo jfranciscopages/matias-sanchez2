@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import Video from "./Video";
+import VideoCarousel from "./VideoCarousel";
 import { experience } from "../utils/experience";
 
 const ExperienceCarousel = () => {
@@ -19,7 +19,7 @@ const ExperienceCarousel = () => {
             key={index}
             style={{ display: index === curr ? "block" : "none" }}
           >
-            <Video
+            <VideoCarousel
               source={item.video}
               height="600"
               width="500"

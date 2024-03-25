@@ -26,8 +26,9 @@ export interface TVideo {
   source: string;
   height: string;
   width: string;
-  mutedVideo: boolean;
+  mutedVideo?: boolean;
   autoPlay: boolean;
+  styles?: object;
 }
 
 export interface TAccordion {

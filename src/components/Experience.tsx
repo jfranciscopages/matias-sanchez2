@@ -1,6 +1,6 @@
 import { experience } from "../utils/experience";
 import React from "react";
-import Video from "./Video";
+import Video from "./VideoCarousel";
 import ExperienceCarousel from "./CarouselExpierence";
 
 const Experience = () => {

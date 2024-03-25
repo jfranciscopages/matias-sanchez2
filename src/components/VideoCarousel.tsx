@@ -2,21 +2,27 @@
 import { TVideo } from "../types";
 import React, { Suspense, useEffect, useRef, useState } from "react";
 
-const Video = ({ source, width, height, mutedVideo, autoPlay, styles }: TVideo) => {
-  const [muted, setMuted] = useState(mutedVideo);
+const VideoCarousel = ({
+  source,
+  width,
+  height,
+  mutedVideo,
+  autoPlay,
+}: TVideo) => {
+  const [muted, setMuted] = useState(true);
   const videoRef = useRef(null);
 
-  // useEffect(() => {
-  //   if (mutedVideo) {
-  //     //console.log("Muted video");
-  //     if (videoRef.current) {
-  //       videoRef.current.pause();
-  //       videoRef.current.currentTime = 0;
-  //       videoRef.current.play();
-  //       setMuted(true);
-  //     }
-  //   }
-  // }, [mutedVideo, muted]);
+  useEffect(() => {
+    if (mutedVideo) {
+      //console.log("Muted video");
+      if (videoRef.current) {
+        videoRef.current.pause();
+        videoRef.current.currentTime = 0;
+        videoRef.current.play();
+        setMuted(true);
+      }
+    }
+  }, [mutedVideo, muted]);
 
   const toggleMute = () => {
     setMuted(!muted);
@@ -37,15 +43,15 @@ const Video = ({ source, width, height, mutedVideo, autoPlay, styles }: TVideo) 
 
   return (
     <Suspense fallback={<p>Cargando feed...</p>}>
-      <div className="relative w-auto" style={styles}>
+      <div className="relative w-auto">
         <video
+          onClick={togglePlay}
           autoPlay={autoPlay}
           muted={muted}
           loop
           playsInline
           ref={videoRef}
           className={`rounded-[30px] md:rounded-[60px] w-full h-full ${height} ${width}`}
-          onClick={togglePlay}
         >
           <source src={source} type="video/mp4" />
           Your browser does not support the video tag.
@@ -85,4 +91,4 @@ const Video = ({ source, width, height, mutedVideo, autoPlay, styles }: TVideo) 
 {
 }
 
-export default Video;
+export default VideoCarousel;

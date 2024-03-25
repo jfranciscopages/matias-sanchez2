@@ -33,10 +33,12 @@ const Checkout = () => {
       window.paypal
         .Buttons({
           style: {
-            shape: "",
+            shape: "rect",
             color: "gold",
-            layout: "vertical",
+            layout: "horizontal",
             label: "paypal",
+            tagline: "false",
+            height: 54
           },
           createSubscription: function (data, actions) {
             return actions.subscription.create({
@@ -62,12 +64,12 @@ const Checkout = () => {
       <div className=" p-6 w-full bg-white rounded-2xl flex flex-col items-center justify-center gap-10">
         <div className="flex flex-col justify-center items-center ">
           <h2 className="text-black font-bold text-2xl text-center">
-            Estas por suscribirte al Plan
+            Estás por suscribirte al Plan
           </h2>
           <h3 className="text-black font-bold text-3xl text-center">{title}</h3>
           <p className="text-black font-bold text-base text-center max-w-[500px] mt-4 opacity-80">
             * Una vez que realices el pago serás redireccionado a la app donde
-            debes registrarte, en aproximadamente 48 horas recibiras dentro de
+            debes registrarte, en aproximadamente 48 horas recibirás dentro de
             la app tus planificaciones.
           </p>
         </div>
@@ -89,7 +91,7 @@ const Checkout = () => {
             className="ml-2"
           />
         </button>
-        <div className=" w-[300px] h-[3px] bg-gray-200"></div>
+        <div className=" w-[300px] h-[3px] bg-gray-200 my-[-10px]"></div>
         <div
           id="paypal-button-container"
           className="w-full max-w-[400px] h-full"
