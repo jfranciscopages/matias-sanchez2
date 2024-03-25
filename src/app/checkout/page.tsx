@@ -56,7 +56,7 @@ const Checkout = () => {
 
   const handleSubmit = () => {
     window.location.href =
-      "https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c9380848df5820d018df9dd0f760560"; // Update this with the appropriate action for Mercado Pago
+      "https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c9380848e1d0a19018e57bbc6f028fc";
   };
 
   return (
