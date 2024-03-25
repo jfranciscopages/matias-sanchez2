@@ -30,7 +30,7 @@ export default function Home() {
             mutedVideo={true}
             autoPlay={true}
           />
-          <ScrollLink href="#planes">
+          <ScrollLink href="#planes" className="mt-1">
             <Button
               background="bg-white"
               textColor="text-black"
@@ -49,7 +49,7 @@ export default function Home() {
             autoPlay={true}
             mutedVideo={true}
           />
-          <ScrollLink href="#planes">
+          <ScrollLink href="#planes" className="mt-1">
             <Button
               background="bg-white"
               textColor="text-black"
