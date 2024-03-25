@@ -21,7 +21,7 @@ export default function Home() {
       <section className="background_w_image w-full flex  flex-col items-center justify-center gap-5 md:gap-0 md:justify-between px-4 md:px-10 lg:px-20 max-w-[1350px] mx-auto">
         <h2 className="flex flex-col justify-center items-center gap-5 text-center text-xl lg:text-4xl leading-4 ">
           <span className="text-xl sm:text-3xl lg:text-4xl 2xl:text-5xl font-extrabold text-blue">
-            Cambiá tu VIDA
+            CAMBIÁ TU VIDA
           </span>
           <span className="text-xl sm:text-3xl 2xl:text-4xl  font-extrabold">
             a través del fitness, hábitos y un entorno positivo
@@ -33,7 +33,7 @@ export default function Home() {
             source={"/videos/video-presentacion.webm"}
             height="600"
             width="500"
-            mutedVideo={false}
+            mutedVideo={true}
             autoPlay={true}
             styles={borders}
           />
@@ -113,9 +113,9 @@ export default function Home() {
         <Carousel />
       </section>
       <DividerReady ready />
-      <div className="h-[40px] w-full flex justify-center items-center px-4 md:px-10 lg:px-20 max-w-[1350px]">
+      {/* <div className="h-[40px] w-full flex justify-center items-center px-4 md:px-10 lg:px-20 max-w-[1350px]">
         <div className="divider"></div>
-      </div>
+      </div> */}
       <FAQ />
     </>
   );
