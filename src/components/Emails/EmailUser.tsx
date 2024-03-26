@@ -22,14 +22,20 @@ export const EmailUser = ({ user }: IUser) => (
     <Preview>¡Hola, {user}! Acá te dejo los links</Preview>
     <Body style={main}>
       <Container style={container}>
+      <Img
+              src={`http://matisanchezsorondo.com/_next/image?url=%2Fimgs%2Fplan4.webp&w=1080&q=75`}
+              width="96"
+              height="96"
+              alt="MatiSanchez Sorondo"
+              style={userImage}
+            />
+        <Text style={title}>¡Hola, {user}!</Text>
         <Img
-          src={`http://matisanchezsorondo.com/_next/image?url=%2Fimgs%2FlogoHQ.webp&w=1080&q=75`}
-          width="170"
-          height="120"
-          alt="Logo"
-          style={logo}
+          src={`http://matisanchezsorondo.com/_next/image?url=%2Fimgs%2Fplan4.webp&w=1080&q=75`}
+          width="200"
+          alt="Matias Sanchez Sorondo"
+          style={userImage}
         />
-        <Text style={title}>¡Hola {user}!</Text>
         <Text style={paragraph}>
           Te dejo los links a la app y al grupo de WhatsApp para que no los
           pierdas
@@ -51,6 +57,15 @@ export const EmailUser = ({ user }: IUser) => (
           >
             Grupo de WhatsApp
           </Button>
+        </Section>
+        <Section>
+        <Img
+          src={`http://matisanchezsorondo.com/_next/image?url=%2Fimgs%2FlogoHQ.webp&w=1080&q=75`}
+          width="170"
+          height="120"
+          alt="Logo"
+          style={logo}
+        />
         </Section>
       </Container>
     </Body>
@@ -88,6 +103,12 @@ const logo = {
   height: "120px",
   borderRadius: "15px",
   margin: "0 auto",
+};
+
+const userImage = {
+  margin: "0 auto",
+  marginBottom: "16px",
+  borderRadius: "50%",
 };
 
 const paragraph = {
