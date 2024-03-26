@@ -19,19 +19,19 @@ interface IUser {
 export const EmailUser = ({ user }: IUser) => (
   <Html>
     <Head />
-    <Preview>Hola {user}!, Acá te dejo los links!</Preview>
+    <Preview>¡Hola, {user}! Acá te dejo los links</Preview>
     <Body style={main}>
       <Container style={container}>
         <Img
-          src={`http://matisanchezsorondo.com/_next/image?url=%2Fimgs%2Flogo.webp&w=1080&q=75`}
+          src={`http://matisanchezsorondo.com/_next/image?url=%2Fimgs%2FlogoHQ.webp&w=1080&q=75`}
           width="170"
           height="120"
           alt="Logo"
           style={logo}
         />
-        <Text style={title}>Hola {user}</Text>
+        <Text style={title}>¡Hola {user}!</Text>
         <Text style={paragraph}>
-          Te dejo los links de la app y del grupo de whatsapp para que no los
+          Te dejo los links a la app y al grupo de WhatsApp para que no los
           pierdas
         </Text>
         <Section style={btnContainer}>
@@ -49,7 +49,7 @@ export const EmailUser = ({ user }: IUser) => (
             style={button}
             href="https://chat.whatsapp.com/JVc0d16WENX5DdXw5rPC7F"
           >
-            Grupo de whatsapp
+            Grupo de WhatsApp
           </Button>
         </Section>
       </Container>
@@ -109,7 +109,6 @@ const button = {
   borderRadius: "20px",
   color: "#fff",
   fontSize: "16px",
-  fontStyle: "italic",
   textDecoration: "none",
   textAlign: "center" as const,
   display: "block",
