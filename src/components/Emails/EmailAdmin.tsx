@@ -23,23 +23,23 @@ interface IUser {
 export const EmailAdmin = ({ user, dni, email }: IUser) => (
   <Html>
     <Head />
-    <Preview>Hola {user}!, Acá te dejo los links!</Preview>
+    <Preview>¡Hola, {user}! Acá te dejo los links</Preview>
     <Body style={main}>
       <Container style={container}>
         <Img
-          src={`http://matisanchezsorondo.com/_next/image?url=%2Fimgs%2Flogo.webp&w=1080&q=75`}
+          src={`http://matisanchezsorondo.com/_next/image?url=%2Fimgs%2FlogoHQ.webp&w=1080&q=75`}
           width="170"
           height="120"
           alt="Logo"
           style={logo}
         />
         <Section>
-          <Text style={title}>¡Hola Matias!</Text>
-          <Text style={subTitle}>{user} adquirio un plan</Text>
+          <Text style={title}>¡Hola Matías!</Text>
+          <Text style={subTitle}>{user} adquirió un plan</Text>
         </Section>
 
         <Section>
-          <Text style={paragraph}>Datos del cliente</Text>
+          <Text style={paragraph}>Datos del cliente:</Text>
           <Row style={row}>
             <Column style={column}>
               <Text style={paragraph}>Nombre</Text>
