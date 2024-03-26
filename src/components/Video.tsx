@@ -51,7 +51,7 @@ const Video = ({
 
   return (
     <Suspense fallback={<p>Cargando feed...</p>}>
-      <div className="relative w-auto" style={styles}>
+      <div className="relative w-4/5" style={styles}>
         <video
           autoPlay={autoPlay}
           muted={muted}

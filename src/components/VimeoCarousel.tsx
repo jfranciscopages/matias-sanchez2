@@ -17,7 +17,7 @@ const VimeoCarousel = () => {
 
   return (
     <div className="justify-center overflow-hidden relative flex">
-      <div className="flex w-full h-full max-w-[500px] max-h-full 2xl:max-h-full transition-transform ease-out duration-1200">
+      <div className="flex w-full h-full max-w-[600px] max-h-full 2xl:max-h-full transition-transform ease-out duration-1200">
         <iframe
           className="z-10"
           title="vimeo-video"

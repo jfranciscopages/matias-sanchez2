@@ -24,13 +24,13 @@ export default function Home() {
         </h2>
         <div className="flex flex-col justify-center items-center gap-4 md:mt-10">
           <Video
-            source={"/videos/video-presentacion.webm"}
+            source={"/videos/vsl.webm"}
             height="600"
             width="500"
             mutedVideo={true}
             autoPlay={true}
           />
-          <ScrollLink href="#planes" className="mt-1">
+          <ScrollLink href="#planes" className="mt-2">
             <Button
               background="bg-white"
               textColor="text-black"
@@ -49,7 +49,7 @@ export default function Home() {
             autoPlay={true}
             mutedVideo={true}
           />
-          <ScrollLink href="#planes" className="mt-1">
+          <ScrollLink href="#planes" className="mt-2">
             <Button
               background="bg-white"
               textColor="text-black"
@@ -62,7 +62,7 @@ export default function Home() {
           {paragraph.map((info, index) => (
             <div
               key={index}
-              className="my-20 flex flex-col md:flex-row items-start"
+              className="my-16 flex flex-col md:flex-row items-start"
             >
               <div className="flex flex-col items-center ">
                 <Image
