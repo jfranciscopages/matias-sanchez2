@@ -10,7 +10,7 @@ export async function POST(request: NextRequest) {
   try {
     await resend.emails.send({
       from: "admin@matisanchezsorondo.com",
-      to: ["jfranciscopages@gmail.com"], //acá va el mail de Mati
+      to: ["matiassanchezsorondo@gmail.com"], 
       subject: `Matías: ${name} se ha unido al equipo`,
       react: EmailAdmin({
         user: name,
