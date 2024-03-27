@@ -22,7 +22,7 @@ export const EmailUser = ({ user }: IUser) => (
     <Preview>¡Hola, {user}! Acá te dejo los links</Preview>
     <Body style={main}>
       <Container style={container}>
-      <Img
+          <Img
               src={`http://matisanchezsorondo.com/_next/image?url=%2Fimgs%2Fplan4.webp&w=1080&q=75`}
               width="96"
               height="96"
@@ -30,12 +30,6 @@ export const EmailUser = ({ user }: IUser) => (
               style={userImage}
             />
         <Text style={title}>¡Hola, {user}!</Text>
-        <Img
-          src={`http://matisanchezsorondo.com/_next/image?url=%2Fimgs%2Fplan4.webp&w=1080&q=75`}
-          width="200"
-          alt="Matias Sanchez Sorondo"
-          style={userImage}
-        />
         <Text style={paragraph}>
           Te dejo los links a la app y al grupo de WhatsApp para que no los
           pierdas

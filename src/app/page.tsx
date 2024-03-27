@@ -16,10 +16,10 @@ export default function Home() {
       <section className="background_w_image w-full flex  flex-col items-center justify-center gap-5 md:gap-0 md:justify-between px-4 md:px-10 lg:px-20 max-w-[1350px] mx-auto">
         <h2 className="flex flex-col justify-center items-center gap-5 text-center text-xl lg:text-4xl leading-4 ">
           <span className="text-xl sm:text-3xl lg:text-4xl 2xl:text-5xl font-extrabold text-blue">
-            CAMBIÁ TU VIDA
+            TRANSFORMÁ 90
           </span>
           <span className="text-xl sm:text-3xl 2xl:text-4xl  font-extrabold">
-            a través del fitness, hábitos y un entorno positivo
+            Tu cambio empieza YA
           </span>
         </h2>
         <div className="flex flex-col justify-center items-center gap-4 md:mt-10">
