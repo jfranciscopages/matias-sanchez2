@@ -62,7 +62,7 @@ const Video = ({
           onClick={togglePlay}
           style={getStyles()}
         >
-          <source src={source} type="video/webm" />
+          <source src={source} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <button

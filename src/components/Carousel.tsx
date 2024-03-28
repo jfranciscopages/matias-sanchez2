@@ -30,9 +30,9 @@ const Carousel = () => {
 
   return (
     <div
-      className="overflow-hidden relative"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+    className="overflow-hidden relative"
+    onMouseEnter={handleMouseEnter}
+    onMouseLeave={handleMouseLeave}
     >
       <div
         className="flex w-full h-full max-w-[500px]  lg:max-w-[700px] lg:h-[700px] transition-transform ease-out duration-1200"

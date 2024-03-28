@@ -24,7 +24,7 @@ export default function Home() {
         </h2>
         <div className="flex flex-col justify-center items-center gap-4 md:mt-10">
           <Video
-            source={"/videos/vsl.webm"}
+            source={"/videos/video-presentacion.webm"}
             height="600"
             width="500"
             mutedVideo={true}
@@ -34,7 +34,7 @@ export default function Home() {
             <Button
               background="bg-white"
               textColor="text-black"
-              text="quiero comenzar ahora"
+              text="quiero empezar ahora"
             />
           </ScrollLink>
         </div>
@@ -53,7 +53,7 @@ export default function Home() {
             <Button
               background="bg-white"
               textColor="text-black"
-              text="quiero comenzar ahora"
+              text="quiero empezar ahora"
             />
           </ScrollLink>
         </div>
@@ -95,6 +95,7 @@ export default function Home() {
         <div className="divider"></div>
       </div>
       <section className="flex w-full flex-col items-center justify-start my-14 px-4 md:px-10 lg:px-20 max-w-[1350px] mx-auto">
+        <h2 className="text-xl sm:text-3xl lg:text-3xl 2xl:text-3xl font-extrabold mb-10">TRANSFORMACIONES</h2>
         <Carousel />
       </section>
       <DividerReady ready />
