@@ -5,6 +5,14 @@ const Timer = () => {
   const initialTime = 15 * 60; // 15 minutes in seconds
   const [secondsRemaining, setSecondsRemaining] = useState(initialTime);
 
+  const TimerDigit = ({ value }) => {
+    return (
+      <span className="countdown lg:text-4xl md:text-4xl sm:text-sm" style={{"--value": value}}>
+        {value.toString().padStart(2, "0")}
+      </span>
+    );
+  };
+
   useEffect(() => {
     const timer = setInterval(() => {
       setSecondsRemaining((prevSeconds) => {
@@ -22,17 +30,27 @@ const Timer = () => {
   const formatTime = (timeInSeconds) => {
     const minutes = Math.floor(timeInSeconds / 60);
     const seconds = timeInSeconds % 60;
-    return `${minutes.toString().padStart(2, "0")}:${seconds
-      .toString()
-      .padStart(2, "0")}`;
+    return { minutes, seconds };
   };
+
+  const { minutes, seconds } = formatTime(secondsRemaining);
 
   return (
     <>
-      <h2 className="flex flex-col justify-center items-center gap-5 text-center text-xl lg:text-4xl md:text-4xl sm:text-3xl leading-4 ">
-        ¡ÚLTIMOS CUPOS!
-      </h2>
-      <p className="text-xl lg:text-4xl md:text-4xl sm:text-3xl">{formatTime(secondsRemaining)}</p>
+      <div className="grid grid-flow-col gap-3 text-center justify-center auto-cols-max">
+        <div className="flex flex-col text-base">
+          <span className="countdown lg:text-4xl md:text-4xl sm:text-sm">
+          <TimerDigit value={minutes} />
+          </span>
+          min
+        </div>
+        <div className="flex flex-col text-base">
+          <span className="countdown lg:text-4xl md:text-4xl sm:text-sm">
+          <TimerDigit value={seconds} />
+          </span>
+          seg
+        </div>
+      </div>
     </>
   );
 };
