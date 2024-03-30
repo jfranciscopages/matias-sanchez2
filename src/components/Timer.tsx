@@ -5,14 +5,6 @@ const Timer = () => {
   const initialTime = 15 * 60; // 15 minutes in seconds
   const [secondsRemaining, setSecondsRemaining] = useState(initialTime);
 
-  const TimerDigit = ({ value }) => {
-    return (
-      <span className="countdown lg:text-4xl md:text-4xl sm:text-sm" style={{"--value": value}}>
-        {value.toString().padStart(2, "0")}
-      </span>
-    );
-  };
-
   useEffect(() => {
     const timer = setInterval(() => {
       setSecondsRemaining((prevSeconds) => {
@@ -40,13 +32,13 @@ const Timer = () => {
       <div className="grid grid-flow-col gap-3 text-center justify-center auto-cols-max">
         <div className="flex flex-col text-base">
           <span className="countdown lg:text-4xl md:text-4xl sm:text-sm">
-          <TimerDigit value={minutes} />
+          {minutes.toString().padStart(2, "0")}
           </span>
           min
         </div>
         <div className="flex flex-col text-base">
           <span className="countdown lg:text-4xl md:text-4xl sm:text-sm">
-          <TimerDigit value={seconds} />
+          {seconds.toString().padStart(2, "0")}
           </span>
           seg
         </div>
