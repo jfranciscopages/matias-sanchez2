@@ -31,3 +31,13 @@ body {
   font-optical-sizing: auto;
   max-width: "100vw";
 }
+
+div[type="video/mp4"] > div {
+  border-radius: 60px;
+}
+
+@media screen and (max-width: 768px) {
+  div[type="video/mp4"] > div {
+    border-radius: 30px;
+  }
+}

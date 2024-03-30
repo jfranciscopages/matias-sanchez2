@@ -27,7 +27,7 @@ export interface TVideo {
   height: string;
   width: string;
   mutedVideo?: boolean;
-  autoPlay: boolean;
+  autoPlay?: boolean;
   styles?: object;
 }
 

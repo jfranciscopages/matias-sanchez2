@@ -1,4 +1,5 @@
 "use client";
+import ReactPlayer from "react-player/lazy";
 import { TVideo } from "../types";
 import React, { Suspense, useRef, useState } from "react";
 
@@ -7,37 +8,50 @@ const Video = ({
   width,
   height,
   mutedVideo,
-  autoPlay,
   styles,
 }: TVideo) => {
   const [muted, setMuted] = useState(mutedVideo);
   const videoRef = useRef(null);
-  const isWindowDefined = typeof window !== "undefined";
+  // const isWindowDefined = typeof window !== "undefined";
+  const [autoPlay, setAutoPlay] = useState(true);
+  const playerRef = useRef(null);
 
-  const isMobile = () => {
-    return isWindowDefined && window.innerWidth <= 768;
-  };
+  // const isMobile = () => {
+  //   return isWindowDefined && window.innerWidth <= 768;
+  // };
 
-  const getStyles = () => {
-    if (isMobile()) {
-      return {
-        border: "2px solid #fff",
-        borderRadius: "30px",
-      };
-    } else {
-      return {
-        border: "3px solid #fff",
-        borderRadius: "60px",
-      };
-    }
-  };
+  const borderStyle = {
+    border: "2px solid #fff",
+    borderRadius: "60px"
+  }
+
+  // const getStyles = () => {
+  //   if (isMobile()) {
+  //     return {
+  //       border: "2px solid #fff",
+  //       borderRadius: "30px",
+  //     };
+  //   } else {
+  //     return {
+  //       border: "3px solid #fff",
+  //       borderRadius: "60px",
+  //     };
+  //   }
+  // };
+
+  // const toggleMute = () => {
+  //   setMuted(!muted);
+  //   if (muted && videoRef.current) {
+  //     videoRef.current.pause();
+  //     videoRef.current.currentTime = 0;
+  //     videoRef.current.play();
+  //   }
+  // };
 
   const toggleMute = () => {
     setMuted(!muted);
-    if (muted && videoRef.current) {
-      videoRef.current.pause();
-      videoRef.current.currentTime = 0;
-      videoRef.current.play();
+    if (muted == true) {
+      playerRef.current.seekTo(0);
     }
   };
 
@@ -50,9 +64,20 @@ const Video = ({
   };
 
   return (
-    <Suspense fallback={<p>Cargando feed...</p>}>
-      <div className="relative w-4/5" style={styles}>
-        <video
+    // <Suspense fallback={<p>Cargando feed...</p>}>
+      <div className="relative w-4/5 rounded-[30px] md:rounded-[60px] w-full h-full ${height} ${width}" style={styles}>
+        <ReactPlayer
+          ref={playerRef}
+          url={`https://player.vimeo.com/video/${source}`}
+          loop
+          playsinline
+          muted={muted}
+          playing={autoPlay}
+          controls={false}
+          style={borderStyle}
+          type={'video/mp4'}
+          />
+        {/* <video
           autoPlay={autoPlay}
           muted={muted}
           loop
@@ -64,7 +89,7 @@ const Video = ({
         >
           <source src={source} type="video/mp4" />
           Your browser does not support the video tag.
-        </video>
+        </video> */}
         <button
           onClick={toggleMute}
           className="z-[99] absolute top-[10px] right-[10px] md:top-[20px] md:right-[20px] rounded-full p-2 lg:p-4 bg-black border-none cursor-pointer"
@@ -94,9 +119,8 @@ const Video = ({
           )}
         </button>
       </div>
-    </Suspense>
+    // </Suspense>
   );
 };
-
 
 export default Video;

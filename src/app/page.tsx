@@ -9,26 +9,36 @@ import Experience from "../components/Experience";
 import FAQ from "../components/FAQ";
 import ScrollLink from "../components/SmoothLink";
 import Image from "next/image";
+import Timer from "../components/Timer";
 
 export default function Home() {
   return (
     <>
       <section className="background_w_image w-full flex  flex-col items-center justify-center gap-5 md:gap-0 md:justify-between px-4 md:px-10 lg:px-20 max-w-[1350px] mx-auto">
-        <h2 className="flex flex-col justify-center items-center gap-5 text-center text-xl lg:text-4xl leading-4 ">
-          <span className="text-xl sm:text-3xl lg:text-4xl 2xl:text-5xl font-extrabold text-blue">
-            TRANSFORMÁ 90
-          </span>
-          <span className="text-xl sm:text-3xl 2xl:text-4xl  font-extrabold">
-            Tu cambio empieza YA
-          </span>
+        <h2 className="flex flex-col justify-center items-start gap-5 text-center text-xl lg:text-4xl leading-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div className="flex flex-col gap-y-2">
+              <span className="text-xl sm:text-3xl lg:text-4xl 2xl:text-5xl font-extrabold text-blue">
+                TRANSFORMÁ 90
+              </span>
+              <span className="text-xl sm:text-3xl 2xl:text-4xl font-extrabold">
+                Tu cambio empieza YA
+              </span>
+            </div>
+            <div className="flex flex-col md:flex-col gap-y-2">
+              <Timer />
+            </div>
+          </div>
         </h2>
+
         <div className="flex flex-col justify-center items-center gap-4 md:mt-10">
           <Video
-            source={"/videos/video-presentacion.webm"}
+            // source={"/videos/video-presentacion.webm"}
+            source={"925423523"}
             height="600"
             width="500"
             mutedVideo={true}
-            autoPlay={true}
+            // autoPlay={true}
           />
           <ScrollLink href="#planes" className="mt-2">
             <Button
@@ -43,10 +53,11 @@ export default function Home() {
       <section className="flex flex-col items-center justify-start my-14 px-4 md:px-10 lg:px-20 max-w-[1350px] mx-auto">
         <div className="flex flex-col justify-center items-center gap-4">
           <Video
-            source={"/videos/video-aplicacion-1.webm"}
+            // source={"/videos/video-aplicacion-1.webm"}
+            source={"928913911"}
             height="600"
             width="500"
-            autoPlay={true}
+            // autoPlay={true}
             mutedVideo={true}
           />
           <ScrollLink href="#planes" className="mt-2">
@@ -95,7 +106,9 @@ export default function Home() {
         <div className="divider"></div>
       </div>
       <section className="flex w-full flex-col items-center justify-start my-14 px-4 md:px-10 lg:px-20 max-w-[1350px] mx-auto">
-        <h2 className="text-xl sm:text-3xl lg:text-3xl 2xl:text-3xl font-extrabold mb-10">TRANSFORMACIONES</h2>
+        <h2 className="text-xl sm:text-3xl lg:text-3xl 2xl:text-3xl font-extrabold mb-10">
+          TRANSFORMACIONES
+        </h2>
         <Carousel />
       </section>
       <DividerReady ready />
