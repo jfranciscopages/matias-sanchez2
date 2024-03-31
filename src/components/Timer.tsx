@@ -33,7 +33,7 @@ const Timer = () => {
       const decreaseAmount = Math.floor(Math.random() * 2) + 1;
       setVacancies(prevVacancies => {
         const newVacancies = prevVacancies - decreaseAmount;
-        return newVacancies >= 0 ? newVacancies : 0;
+        return newVacancies >= 11 ? newVacancies : 11;
       });
     }, 62000); 
 
