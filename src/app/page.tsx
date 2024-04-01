@@ -9,6 +9,7 @@ import Experience from "../components/Experience";
 import FAQ from "../components/FAQ";
 import ScrollLink from "../components/SmoothLink";
 import Image from "next/image";
+import Timer from "../components/Timer";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
           <span className="text-xl sm:text-3xl 2xl:text-4xl  font-extrabold">
             Tu cambio empieza YA
           </span>
+          <Timer />
         </h2>
         <div className="flex flex-col justify-center items-center gap-4 md:mt-10">
           <Video
