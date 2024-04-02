@@ -1,4 +1,4 @@
-import { lazy } from "react";
+import dynamic from "next/dynamic";
 import DividerReady from "../components/DividerReady";
 import Button from "../components/Button";
 import Paragraph from "../components/Paragraph";
@@ -9,9 +9,9 @@ import ScrollLink from "../components/SmoothLink";
 import Image from "next/image";
 import Timer from "../components/Timer";
 
-const Plans = lazy(() => import("../components/Plans"));
-const Experience = lazy(() => import("../components/Experience"));
-const Carousel = lazy(() => import("../components/Carousel"));
+const Plans = dynamic(() => import("../components/Plans"));
+const Experience = dynamic(() => import("../components/Experience"));
+const Carousel = dynamic(() => import("../components/Carousel"));
 
 export default function Home() {
   return (
