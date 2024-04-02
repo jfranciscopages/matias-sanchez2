@@ -1,15 +1,17 @@
+import { lazy } from "react";
 import DividerReady from "../components/DividerReady";
 import Button from "../components/Button";
 import Paragraph from "../components/Paragraph";
 import Video from "../components/Video";
 import { paragraph } from "../utils/paragraphs";
-import Plans from "../components/Plans";
-import Carousel from "../components/Carousel";
-import Experience from "../components/Experience";
 import FAQ from "../components/FAQ";
 import ScrollLink from "../components/SmoothLink";
 import Image from "next/image";
 import Timer from "../components/Timer";
+
+const Plans = lazy(() => import("../components/Plans"));
+const Experience = lazy(() => import("../components/Experience"));
+const Carousel = lazy(() => import("../components/Carousel"));
 
 export default function Home() {
   return (
@@ -97,7 +99,9 @@ export default function Home() {
         <div className="divider"></div>
       </div>
       <section className="flex w-full flex-col items-center justify-start my-14 px-4 md:px-10 lg:px-20 max-w-[1350px] mx-auto">
-        <h2 className="text-xl sm:text-3xl lg:text-3xl 2xl:text-3xl font-extrabold mb-10">TRANSFORMACIONES</h2>
+        <h2 className="text-xl sm:text-3xl lg:text-3xl 2xl:text-3xl font-extrabold mb-10">
+          TRANSFORMACIONES
+        </h2>
         <Carousel />
       </section>
       <DividerReady ready />
