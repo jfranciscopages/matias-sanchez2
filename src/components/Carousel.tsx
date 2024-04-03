@@ -45,7 +45,7 @@ const Carousel = () => {
           src={image}
           width={1000}
           height={600}
-          style={index === 2 ? {marginTop: "100px", marginBottom: "100px"} : null}
+          style={index === 3 ? {marginTop: "100px", marginBottom: "100px"} : null}
         />
         ))}
       </div>

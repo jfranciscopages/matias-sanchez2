@@ -35,7 +35,7 @@ const Timer = () => {
         const newVacancies = prevVacancies - decreaseAmount;
         return newVacancies >= 11 ? newVacancies : 11;
       });
-    }, 62000); 
+    }, 31000); 
 
     return () => clearInterval(intervalId);
   }, []);
