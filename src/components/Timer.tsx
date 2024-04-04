@@ -26,19 +26,21 @@ const Timer = () => {
 
   const { minutes, seconds } = formatTime(secondsRemaining);
 
-  const [vacancies, setVacancies] = useState(20);
+  // const [vacancies, setVacancies] = useState(20);
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      const decreaseAmount = Math.floor(Math.random() * 2) + 1;
-      setVacancies(prevVacancies => {
-        const newVacancies = prevVacancies - decreaseAmount;
-        return newVacancies >= 11 ? newVacancies : 11;
-      });
-    }, 31000); 
+  // useEffect(() => {
+  //   const intervalId = setInterval(() => {
+  //     const decreaseAmount = Math.floor(Math.random() * 2) + 1;
+  //     setVacancies(prevVacancies => {
+  //       const newVacancies = prevVacancies - decreaseAmount;
+  //       return newVacancies >= 11 ? newVacancies : 11;
+  //     });
+  //   }, 31000); 
 
-    return () => clearInterval(intervalId);
-  }, []);
+  //   return () => clearInterval(intervalId);
+  // }, []);
+
+  const vacancies = 3;
 
   return (
     <>
@@ -62,11 +64,11 @@ const Timer = () => {
         </div>
         <div className="flex flex-col text-base pt-1 md:pt-px">
           <p className="text-sm md:text-xl hidden md:flex">¡ÚLTIMOS CUPOS!</p>
-          <p className="text-sm md:text-xl whitespace-nowrap hidden md:flex">
-            <span className="font-extrabold text-blue px-0.5">{vacancies}</span> DISPONIBLES
+          <p className="text-sm md:text-xl justify-center whitespace-nowrap hidden md:flex">
+            <span className="font-extrabold text-xl text-blue px-1">{vacancies}</span> DISPONIBLES
           </p>
-          <p className="text-sm md:hidden whitespace-nowrap">
-            ¡ÚLTIMOS <span className="font-extrabold text-blue px-0.5">{vacancies}</span> CUPOS DISPONIBLES!
+          <p className="text-sm md:hidden justify-center whitespace-nowrap">
+            ¡ÚLTIMOS <span className="font-extrabold text-lg text-blue px-1">{vacancies}</span> CUPOS DISPONIBLES!
           </p>
         </div>
       </div>
