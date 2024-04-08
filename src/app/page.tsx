@@ -7,7 +7,6 @@ import { paragraph } from "../utils/paragraphs";
 import FAQ from "../components/FAQ";
 import ScrollLink from "../components/SmoothLink";
 import Image from "next/image";
-import Timer from "../components/Timer";
 
 const Plans = dynamic(() => import("../components/Plans"));
 const Experience = dynamic(() => import("../components/Experience"));
@@ -24,7 +23,6 @@ export default function Home() {
           <span className="text-xl sm:text-3xl 2xl:text-4xl  font-extrabold">
             Tu cambio empieza YA
           </span>
-          <Timer />
         </h2>
         <div className="flex flex-col justify-center items-center gap-4 md:mt-10">
           <Video

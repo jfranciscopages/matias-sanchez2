@@ -97,11 +97,11 @@ const Plan = ({
                     />
                   </svg>
                 </div>
-                <p className="text-sm 2xl:text-sm">{benefit}</p>
+                <p className="text-sm 2xl:text-base">{benefit}</p>
               </div>
             ))}
         </div>
-        <p className="text-lg 2xl:text-lg font-extrabold">¿Qué incluye?</p>
+        <p className="text-lg 2xl:text-xl font-extrabold">¿Qué incluye?</p>
         <div className="flex flex-col items-start justify-center">
           {includes.map((include, index) => (
             <div className="w-full h-full flex gap-4 my-2" key={index}>
@@ -113,7 +113,7 @@ const Plan = ({
                   />
                 </svg>
               </div>
-              <p className="text-sm 2xl:text-sm">{include}</p>
+              <p className="text-sm 2xl:text-base">{include}</p>
             </div>
           ))}
         </div>
