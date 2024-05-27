@@ -6,6 +6,7 @@ import { paragraph } from "../utils/paragraphs";
 import Plans from "../components/Plans";
 import Carousel from "../components/Carousel";
 import Experience from "../components/Experience";
+import VslEmbeded from "../components/VslEmbeded";
 import FAQ from "../components/FAQ";
 import ScrollLink from "../components/SmoothLink";
 import Image from "next/image";
@@ -22,11 +23,11 @@ export default function Home() {
           <span className="text-xl sm:text-3xl 2xl:text-4xl  font-extrabold">
             Tu cambio empieza YA
           </span>
-          <Timer />
+          {/* <Timer /> */}
         </h2>
         <div className="flex flex-col justify-center items-center gap-4 md:mt-10">
           <Video
-            source={"/videos/video-presentacion.webm"}
+            source={"/videos/VSL FINAL.mp4"}
             height="600"
             width="500"
             mutedVideo={true}
@@ -36,30 +37,24 @@ export default function Home() {
             <Button
               background="bg-white"
               textColor="text-black"
-              text="quiero empezar ahora"
+              text="Agenda tu llamada!"
             />
           </ScrollLink>
         </div>
       </section>
-      <Plans />
+      {/* <Plans /> */}
+      <Experience />
+      <div className="h-[40px] w-full flex justify-center items-center px-4 md:px-10 lg:px-20 max-w-[1350px] mx-auto">
+        <div className="divider"></div>
+      </div>
+      <section className="flex w-full flex-col items-center justify-start my-14 px-4 md:px-10 lg:px-20 max-w-[1350px] mx-auto">
+        <h2 className="text-xl sm:text-3xl lg:text-3xl 2xl:text-3xl font-extrabold mb-10">
+          TRANSFORMACIONES
+        </h2>
+        <Carousel />
+      </section>
+      <DividerReady ready />
       <section className="flex flex-col items-center justify-start my-14 px-4 md:px-10 lg:px-20 max-w-[1350px] mx-auto">
-        <div className="flex flex-col justify-center items-center gap-4">
-          <Video
-            source={"/videos/video-aplicacion-1.webm"}
-            height="600"
-            width="500"
-            autoPlay={true}
-            mutedVideo={true}
-          />
-          <ScrollLink href="#planes" className="mt-2">
-            <Button
-              background="bg-white"
-              textColor="text-black"
-              text="quiero empezar ahora"
-            />
-          </ScrollLink>
-        </div>
-
         <div className=" w-full h-full px-5">
           {paragraph.map((info, index) => (
             <div
@@ -92,15 +87,17 @@ export default function Home() {
         </div>
       </section>
       <DividerReady />
-      <Experience />
-      <div className="h-[40px] w-full flex justify-center items-center px-4 md:px-10 lg:px-20 max-w-[1350px] mx-auto">
+      {/* <Experience /> */}
+      {/* <div className="h-[40px] w-full flex justify-center items-center px-4 md:px-10 lg:px-20 max-w-[1350px] mx-auto">
         <div className="divider"></div>
       </div>
       <section className="flex w-full flex-col items-center justify-start my-14 px-4 md:px-10 lg:px-20 max-w-[1350px] mx-auto">
-        <h2 className="text-xl sm:text-3xl lg:text-3xl 2xl:text-3xl font-extrabold mb-10">TRANSFORMACIONES</h2>
+        <h2 className="text-xl sm:text-3xl lg:text-3xl 2xl:text-3xl font-extrabold mb-10">
+          TRANSFORMACIONES
+        </h2>
         <Carousel />
       </section>
-      <DividerReady ready />
+      <DividerReady ready /> */}
       <FAQ />
     </>
   );
