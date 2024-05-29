@@ -27,7 +27,7 @@ const DividerReady = ({ ready }: DividerReady) => {
         <p className="text-xl md:text-3xl font-extrabold">¿Estás listo?</p>
         <ScrollLink href="#planes">
           <Button
-            text="INICIAR AHORA"
+            text="Agenda tu llamada"
             background="bg-black"
             textColor="text-white"
           />

@@ -25,25 +25,34 @@ export default function Home() {
           </span>
         </h2>
         <div className="flex flex-col justify-center items-center gap-4 md:mt-10">
-          <Video
+          {/* <Video
             source={"/videos/video-presentacion.webm"}
             height="600"
             width="500"
             mutedVideo={true}
             autoPlay={true}
-          />
+          /> */}
+          <iframe
+            className="video_vsl z-10 "
+            title="vimeo-video"
+            src={`https://player.vimeo.com/video/950957131`}
+            width="1200"
+            height="900"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowFullScreen
+          ></iframe>
           <ScrollLink href="#planes" className="mt-2">
             <Button
               background="bg-white"
               textColor="text-black"
-              text="quiero empezar ahora"
+              text="Agenda tu llamada"
             />
           </ScrollLink>
         </div>
       </section>
-      <Plans />
+      {/* <Plans /> */}
       <section className="flex flex-col items-center justify-start my-14 px-4 md:px-10 lg:px-20 max-w-[1350px] mx-auto">
-        <div className="flex flex-col justify-center items-center gap-4">
+        {/* <div className="flex flex-col justify-center items-center gap-4">
           <Video
             source={"/videos/video-aplicacion-1.webm"}
             height="600"
@@ -58,7 +67,7 @@ export default function Home() {
               text="quiero empezar ahora"
             />
           </ScrollLink>
-        </div>
+        </div> */}
 
         <div className=" w-full h-full px-5">
           {paragraph.map((info, index) => (
