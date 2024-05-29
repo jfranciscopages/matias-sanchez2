@@ -15,9 +15,21 @@
   }
 
   .video_vsl {
-    @media screen and (min-width: 100px) {
+    @media screen and (min-width: 10px) {
       width: auto;
-      height: auto;
+      height:auto;
+    }
+    @media screen and (min-width: 300px) {
+      width: 300px;
+      height: 150px;
+    }
+    @media screen and (min-width: 400px) {
+      width: 300px;
+      height: 220px;
+    }
+    @media screen and (min-width: 500px) {
+      width: 400px;
+      height: 300px;
     }
     @media screen and (min-width: 600px) {
       width: 500px;
