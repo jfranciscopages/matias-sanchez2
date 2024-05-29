@@ -10,7 +10,7 @@ const Footer = () => {
       </div>
       <div className="flex flex-col w-full h-full justify-center items-center md:flex-row md:items-center md:justify-center px-8 my-10 md:my-0 md:h-[134px]">
         <Image
-          src="/imgs/logoHQ.webp"
+          src="/imgs/logoHqWhite.webp"
           width={1000}
           height={1000}
           className="w-full h-full mt-4 max-w-[300px] md:max-w-[400px] 2xl:max-w-[400px]"

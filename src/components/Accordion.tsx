@@ -6,7 +6,7 @@ const AccordionItem = ({ title, content }: TAccordion) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border px-2 py-4 border-gray-800 rounded mb-2 w-full my-4">
+    <div className="border px-2 py-4 border-white rounded mb-2 w-full my-4">
       <div
         className="flex justify-start gap-4 items-center px-4 py-2 cursor-pointer"
         onClick={() => setIsOpen(!isOpen)}
