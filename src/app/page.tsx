@@ -69,8 +69,8 @@ export default function Home() {
         <div className="divider"></div>
       </div>
       <section className="flex w-full flex-col items-center justify-start my-14 px-4 md:px-10 lg:px-20 max-w-[1350px] mx-auto">
-        <h2 className="text-xl sm:text-3xl lg:text-3xl 2xl:text-3xl font-extrabold mb-10">
-          TRANSFORMACIONES
+        <h2 className="text-xl sm:text-3xl lg:text-5xl 2xl:text-5xl text-center font-extrabold mb-10">
+          Transformaciones
         </h2>
         <Carousel />
       </section>
