@@ -4,7 +4,7 @@ import { carouselImages } from "../utils/carouselImages";
 import { useEffect, useState } from "react";
 
 const Carousel = () => {
-  const autoSlideInterval = 2000;
+  const autoSlideInterval = 4000;
   const [curr, setCurr] = useState(0);
   const [autoSlide, setAutoSlide] = useState(true);
 
@@ -35,7 +35,7 @@ const Carousel = () => {
     onMouseLeave={handleMouseLeave}
     >
       <div
-        className="flex w-full h-full max-w-[500px]  lg:max-w-[700px] lg:h-[700px] transition-transform ease-out duration-1200"
+        className="flex w-full h-full lg:h-[700px] transition-transform ease-out duration-1200"
         style={{ transform: `translateX(-${curr * 100}%)` }}
       >
         {carouselImages.map((image, index) => (
@@ -43,7 +43,7 @@ const Carousel = () => {
           key={index}
           alt={index.toString()}
           src={image}
-          width={1000}
+          width={2000}
           height={600}
           style={index === 3 ? {marginTop: "100px", marginBottom: "100px"} : null}
         />
