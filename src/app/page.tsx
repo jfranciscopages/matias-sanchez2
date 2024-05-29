@@ -14,6 +14,8 @@ import Timer from "../components/Timer";
 import Link from "next/link";
 
 export default function Home() {
+
+
   return (
     <>
       {/* <div className="w-full bg-gradient-to-b from-black to-gray-800"> */}
@@ -32,7 +34,7 @@ export default function Home() {
             autoPlay={true}
           /> */}
           <iframe
-            className="z-10 md:-mb-20"
+            className="video_vsl z-10 md:-mb-20"
             title="vimeo-video"
             src={`https://player.vimeo.com/video/950957131`}
             width="1200"
