@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-
 const Footer = () => {
   return (
     <footer className="flex my-4 flex-col justify-between w-full h-full max-w-[1350px] mx-auto">
