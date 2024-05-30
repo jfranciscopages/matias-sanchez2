@@ -25,8 +25,7 @@ export default function Home() {
         <h2 className="flex flex-col justify-center items-center gap-5 text-center text-xl lg:text-4xl leading-4 ">
           <span className="text-xl sm:text-3xl lg:text-4xl 2xl:text-5xl font-extrabold ">
             COMO CAMBIAR TU <span className="blueColor">CUERPO</span>, MEJORAR
-            TU <span className="blueColor">SALUD</span>, Y TRANSFORMAR TU
-            <span className="blueColor"> MENTALIDAD</span>.
+            TU SALUD, Y TRANSFORMAR TU MENTALIDAD
           </span>
         </h2>
         <div className="flex flex-col justify-center items-center gap-7 md:-mt-20 ">
@@ -44,7 +43,6 @@ export default function Home() {
               pathname: "/calendly",
             }}
           >
-            {" "}
             <Button
               background="bg-white"
               textColor="text-black"
@@ -53,13 +51,13 @@ export default function Home() {
           </Link>
         </div>
       </section>
-      {/* <div className="h-[40px] mt-20 w-full flex justify-center items-center px-4 md:px-10 lg:px-20 max-w-[1350px] mx-auto">
+      <div className="h-[40px] mt-20 w-full flex justify-center items-center px-4 md:px-10 lg:px-20 max-w-[1350px] mx-auto">
         <div className="divider"></div>
       </div>
       <Experience />
       <div className="h-[40px] w-full flex justify-center items-center px-4 md:px-10 lg:px-20 max-w-[1350px] mx-auto">
         <div className="divider"></div>
-      </div> */}
+      </div>
       {/* <section className="flex w-full flex-col items-center justify-start my-14 px-4 md:px-10 lg:px-20 max-w-[1350px] mx-auto">
         <h2 className="text-xl sm:text-3xl lg:text-5xl 2xl:text-5xl text-center font-extrabold mb-10">
           Transformaciones
