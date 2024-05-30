@@ -85,6 +85,15 @@
     }
   }
 
+  .isMobile{
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
+  }
+
   .divider {
     width: 100%;
     background-color: white;

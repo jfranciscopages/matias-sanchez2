@@ -51,13 +51,17 @@ export default function Home() {
           </Link>
         </div>
       </section>
-      <div className="h-[40px] mt-20 w-full flex justify-center items-center px-4 md:px-10 lg:px-20 max-w-[1350px] mx-auto">
-        <div className="divider"></div>
-      </div>
-      <Experience />
-      <div className="h-[40px] w-full flex justify-center items-center px-4 md:px-10 lg:px-20 max-w-[1350px] mx-auto">
-        <div className="divider"></div>
-      </div>
+
+      <section className="isMobile">
+        <div className="h-[40px] mt-20 w-full flex justify-center items-center px-4 md:px-10 lg:px-20 max-w-[1350px] mx-auto">
+          <div className="divider"></div>
+        </div>
+        <Experience />
+        <div className="h-[40px] w-full flex justify-center items-center px-4 md:px-10 lg:px-20 max-w-[1350px] mx-auto">
+          <div className="divider"></div>
+        </div>
+      </section>
+
       {/* <section className="flex w-full flex-col items-center justify-start my-14 px-4 md:px-10 lg:px-20 max-w-[1350px] mx-auto">
         <h2 className="text-xl sm:text-3xl lg:text-5xl 2xl:text-5xl text-center font-extrabold mb-10">
           Transformaciones
