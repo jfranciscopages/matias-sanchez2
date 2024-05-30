@@ -18,7 +18,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="text-white w-full bg-gradient-to-b from-black to-gray-800">
+      <body className="backgroundColor text-white w-full ">
         <Header />
         <main className="flex w-full flex-col items-center justify-between text-white">
           {children}

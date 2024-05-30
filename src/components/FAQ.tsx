@@ -5,7 +5,7 @@ import AccordionItem from "./Accordion";
 const FAQ = () => {
   return (
     <section className="flex w-full h-full flex-col items-center justify-start my-20 px-4 md:px-10 lg:px-20 max-w-[1350px]">
-      <div className="flex flex-col justify-center items-center gap-5">
+      <div className="flex flex-col justify-center items-center ">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 512 512"

@@ -14,13 +14,21 @@
     background-image: url("https://content.app-sources.com/s/58783475964065609/uploads/Images/Purple_Dark_Blur_Gradient_Glass_Effect_Reminder_Notification_Instagram_Post-2865570.png?format=webp");
   }
 
+  .backgroundColor {
+    background-color: #151515;
+  }
+
+  .blueColor {
+    color: rgb(41, 105, 176);
+  }
+
   .video_vsl {
     @media screen and (min-width: 10px) {
       width: auto;
       height: auto;
     }
     @media screen and (min-width: 300px) {
-      width: 300px;
+      width: 350px;
       height: 150px;
     }
     @media screen and (min-width: 400px) {
@@ -46,6 +54,33 @@
     @media screen and (min-width: 1300px) {
       width: 1200px;
       height: 900px;
+    }
+  }
+
+  .imgLogo {
+    @media screen and (min-width: 10px) {
+      width: auto;
+    }
+    @media screen and (min-width: 300px) {
+      width: 150px;
+    }
+    @media screen and (min-width: 400px) {
+      width: 200px;
+    }
+    @media screen and (min-width: 500px) {
+      width: 250px;
+    }
+    @media screen and (min-width: 600px) {
+      width: 300px;
+    }
+    @media screen and (min-width: 767px) {
+      width: 350px;
+    }
+    @media screen and (min-width: 1100px) {
+      width: 400px;
+    }
+    @media screen and (min-width: 1300px) {
+      width: 400px;
     }
   }
 

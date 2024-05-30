@@ -8,10 +8,10 @@ const Header = () => {
       <nav className="w-full flex justify-center items-center">
         <Link href="/">
           <Image
-            src="/imgs/logoHQ.webp"
-            width={1000}
-            height={1000}
-            className="w-full h-full max-w-[540px]"
+            className="imgLogo h-full max-w-[540px]"
+            src="/imgs/logoHqWhite.webp"
+            width={500}
+            height={500}
             alt="logo"
           />
         </Link>
