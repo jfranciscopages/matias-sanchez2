@@ -24,9 +24,9 @@ export default function Home() {
       <section className=" w-full flex  flex-col items-center justify-center gap-5 md:gap-0 md:justify-between px-4 md:px-10 lg:px-20 max-w-[1350px] mx-auto mb-4">
         <h2 className="flex flex-col justify-center items-center gap-5 text-center text-xl lg:text-4xl leading-4 ">
           <span className="text-xl sm:text-3xl lg:text-4xl 2xl:text-5xl font-extrabold ">
-            Como cambiar tu <span className="blueColor">cuerpo</span>, mejorar
-            tu <span className="blueColor">salud</span>, y transformar tu
-            <span className="blueColor"> mentalidad</span> en 90 dias
+            COMO CAMBIAR TU <span className="blueColor">CUERPO</span>, MEJORAR
+            TU <span className="blueColor">SALUD</span>, Y TRANSFORMAR TU
+            <span className="blueColor"> MENTALIDAD</span>.
           </span>
         </h2>
         <div className="flex flex-col justify-center items-center gap-7 md:-mt-20 ">
@@ -53,7 +53,7 @@ export default function Home() {
           </Link>
         </div>
       </section>
-      {/* <div className="h-[40px] w-full flex justify-center items-center px-4 md:px-10 lg:px-20 max-w-[1350px] mx-auto">
+      {/* <div className="h-[40px] mt-20 w-full flex justify-center items-center px-4 md:px-10 lg:px-20 max-w-[1350px] mx-auto">
         <div className="divider"></div>
       </div>
       <Experience />
