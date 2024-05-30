@@ -40,7 +40,17 @@ export default function Home() {
             allow="autoplay; fullscreen; picture-in-picture"
             allowFullScreen
           ></iframe>
-          <Link
+          <span></span>
+          <a href="/calendly">
+            <button
+              className="shadow-3xl text-center text-xl md:text-2xl lg:text-4xl font-extrabold rounded-[60px] bg-white 
+            text-black px-[20px] py-[15px] md:px-[40px] md:py-[20px] w-full
+            max-w-[532px] font-bold animate-fade-in transform transition duration-500 hover:scale-105"
+            >
+              AGENDA TU LLAMADA
+            </button>
+          </a>
+          {/* <Link
             href={{
               pathname: "/calendly",
             }}
@@ -50,7 +60,7 @@ export default function Home() {
               textColor="text-black"
               text="Agenda tu llamada"
             />
-          </Link>
+          </Link> */}
         </div>
       </div>
 

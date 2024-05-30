@@ -27,6 +27,9 @@ const config: Config = {
           "100%": { opacity: "1" },
         },
       },
+      boxShadow: {
+        "3xl": "0px 8px 60px 15px rgb(41, 105, 176)",
+      },
     },
   },
 
