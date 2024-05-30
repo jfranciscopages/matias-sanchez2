@@ -35,71 +35,71 @@
 }
 
 .video_vsl {
-  display: flex;
+  display: flex !important;
 
   @media screen and (min-width: 10px) {
-    width: auto;
-    height: auto;
+    width: auto !important;
+    height: auto !important;
   }
   @media screen and (min-width: 300px) {
-    width: 350px;
-    height: 150px;
+    width: 350px !important;
+    height: 150px !important;
   }
   @media screen and (min-width: 350px) {
-    width: 350px;
-    height: 200px;
+    width: 350px !important;
+    height: 200px !important;
   }
   @media screen and (min-width: 400px) {
-    width: 400px;
-    height: 220px;
+    width: 400px !important;
+    height: 220px !important;
   }
   @media screen and (min-width: 500px) {
-    width: 500px;
-    height: 300px;
+    width: 500px !important;
+    height: 300px !important;
   }
   @media screen and (min-width: 600px) {
-    width: 600px;
-    height: 400px;
+    width: 600px !important;
+    height: 400px !important;
   }
   @media screen and (min-width: 767px) {
-    width: 760px;
-    height: 580px;
+    width: 760px !important;
+    height: 580px !important;
   }
   @media screen and (min-width: 1100px) {
-    width: 1000px;
-    height: 800px;
+    width: 1000px !important;
+    height: 800px !important;
   }
   @media screen and (min-width: 1300px) {
-    width: 1200px;
-    height: 900px;
+    width: 1200px !important;
+    height: 900px !important;
   }
 }
 
 .imgLogo {
-  display: flex;
+  display: flex !important;
   @media screen and (min-width: 10px) {
-    width: auto;
+    width: auto !important;
   }
   @media screen and (min-width: 300px) {
-    width: 150px;
+    width: 150px !important;
   }
   @media screen and (min-width: 400px) {
-    width: 200px;
+    width: 200px !important;
   }
   @media screen and (min-width: 500px) {
-    width: 250px;
+    width: 250px !important;
   }
   @media screen and (min-width: 600px) {
-    width: 300px;
+    width: 300px !important;
   }
   @media screen and (min-width: 767px) {
-    width: 350px;
+    width: 350px !important;
   }
   @media screen and (min-width: 1100px) {
-    width: 400px;
+    width: 400px !important;
   }
   @media screen and (min-width: 1300px) {
-    width: 400px;
+    width: 400px !important;
   }
 }
 
