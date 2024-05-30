@@ -30,6 +30,9 @@ const config: Config = {
       boxShadow: {
         "3xl": "0px 8px 60px 15px rgb(41, 105, 176)",
       },
+      fontSize: {
+        'l': '1.1rem',
+      }
     },
   },
 
