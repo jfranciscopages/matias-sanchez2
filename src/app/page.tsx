@@ -21,35 +21,37 @@ export default function Home() {
   return (
     <>
       {/* <div className="w-full bg-gradient-to-b from-black to-gray-800"> */}
-      <section className=" w-full flex  flex-col items-center justify-center gap-5 md:gap-0 md:justify-between px-4 md:px-10 lg:px-20 max-w-[1350px] mx-auto mb-4">
-        <h2 className="flex flex-col justify-center items-center gap-5 text-center text-xl lg:text-4xl leading-4 ">
-          <span className="text-xl sm:text-3xl lg:text-4xl 2xl:text-5xl font-extrabold ">
-            COMO CAMBIAR TU <span className="blueColor">CUERPO</span>, MEJORAR
-            TU SALUD, Y TRANSFORMAR TU MENTALIDAD
-          </span>
-        </h2>
-      </section>
-      <div className="flex flex-col justify-center items-center gap-7 md:-mt-20 ">
-        <iframe
-          className="video_vsl z-10 md:-mb-20"
-          title="vimeo-video"
-          src={`https://player.vimeo.com/video/950957131`}
-          width="1200"
-          height="900"
-          allow="autoplay; fullscreen; picture-in-picture"
-          allowFullScreen
-        ></iframe>
-        <Link
-          href={{
-            pathname: "/calendly",
-          }}
-        >
-          <Button
-            background="bg-white"
-            textColor="text-black"
-            text="Agenda tu llamada"
-          />
-        </Link>
+      <div className="heightMobile">
+        <section className=" w-full flex  flex-col items-center justify-center gap-5 md:gap-0 md:justify-between px-4 md:px-10 lg:px-20 max-w-[1350px] mx-auto mb-4">
+          <h2 className="flex flex-col justify-center items-center gap-5 text-center text-xl lg:text-4xl leading-4 ">
+            <span className="text-xl sm:text-3xl lg:text-4xl 2xl:text-5xl font-extrabold ">
+              COMO CAMBIAR TU <span className="blueColor">CUERPO</span>, MEJORAR
+              TU SALUD, Y TRANSFORMAR TU MENTALIDAD
+            </span>
+          </h2>
+        </section>
+        <div className="flex flex-col justify-center items-center gap-7 md:-mt-20 ">
+          <iframe
+            className="video_vsl z-10 md:-mb-20"
+            title="vimeo-video"
+            src={`https://player.vimeo.com/video/950957131`}
+            width="1200"
+            height="900"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+          <Link
+            href={{
+              pathname: "/calendly",
+            }}
+          >
+            <Button
+              background="bg-white"
+              textColor="text-black"
+              text="Agenda tu llamada"
+            />
+          </Link>
+        </div>
       </div>
 
       <section className="isMobile">

@@ -34,6 +34,12 @@
   }
 }
 
+.heightMobile {
+  @media screen and (max-width: 768px) {
+    height: 100vh;
+  }
+}
+
 .video_vsl {
   display: flex !important;
 
@@ -74,8 +80,6 @@
     height: 900px !important;
   }
 }
-
-
 
 .video_vsl {
   display: flex !important;
