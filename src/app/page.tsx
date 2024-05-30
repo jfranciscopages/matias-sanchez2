@@ -28,29 +28,29 @@ export default function Home() {
             TU SALUD, Y TRANSFORMAR TU MENTALIDAD
           </span>
         </h2>
-        <div className="flex flex-col justify-center items-center gap-7 md:-mt-20 ">
-          <iframe
-            className="video_vsl z-10 md:-mb-20"
-            title="vimeo-video"
-            src={`https://player.vimeo.com/video/950957131`}
-            width="1200"
-            height="900"
-            allow="autoplay; fullscreen; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-          <Link
-            href={{
-              pathname: "/calendly",
-            }}
-          >
-            <Button
-              background="bg-white"
-              textColor="text-black"
-              text="Agenda tu llamada"
-            />
-          </Link>
-        </div>
       </section>
+      <div className="flex flex-col justify-center items-center gap-7 md:-mt-20 ">
+        <iframe
+          className="video_vsl z-10 md:-mb-20"
+          title="vimeo-video"
+          src={`https://player.vimeo.com/video/950957131`}
+          width="1200"
+          height="900"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+        <Link
+          href={{
+            pathname: "/calendly",
+          }}
+        >
+          <Button
+            background="bg-white"
+            textColor="text-black"
+            text="Agenda tu llamada"
+          />
+        </Link>
+      </div>
 
       <section className="isMobile">
         <div className="h-[40px] mt-20 w-full flex justify-center items-center px-4 md:px-10 lg:px-20 max-w-[1350px] mx-auto">

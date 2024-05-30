@@ -32,20 +32,24 @@
       width: 350px;
       height: 150px;
     }
+    @media screen and (min-width: 350px) {
+      width: 350px;
+      height: 200px;
+    }
     @media screen and (min-width: 400px) {
-      width: 300px;
+      width: 400px;
       height: 220px;
     }
     @media screen and (min-width: 500px) {
-      width: 400px;
+      width: 500px;
       height: 300px;
     }
     @media screen and (min-width: 600px) {
-      width: 500px;
+      width: 600px;
       height: 400px;
     }
     @media screen and (min-width: 767px) {
-      width: 700px;
+      width: 760px;
       height: 580px;
     }
     @media screen and (min-width: 1100px) {
