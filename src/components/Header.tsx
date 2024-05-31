@@ -6,19 +6,17 @@ const Header = () => {
   return (
     <header className="w-full flex flex-col items-center">
       <nav className="w-full flex justify-center items-center">
-        <Link href="/">
-          <Image
+        <span></span>
+        <a href="/">
+          <img
             className="imgLogo h-full max-w-[540px]"
             src="/imgs/logoHqWhite.webp"
-            width={1000}
-            height={1000}
             alt="logo"
           />
-        </Link>
+        </a>
       </nav>
     </header>
   );
 };
 
 export default Header;
-
