@@ -27,7 +27,7 @@ export default function Home() {
             <span className="text-l sm:text-3xl lg:text-4xl 2xl:text-5xl font-extrabold ">
               COMO CAMBIAR TU <span className="blueColor">CUERPO</span>, MEJORAR
               TU SALUD Y TRANSFORMAR TU MENTALIDAD <br />{" "}
-              <span className="text-m sm:text-2xl lg:text-3xl 2xl:text-4xl">
+              <span >
                 CON <span className="blueColor">SOLO 3 HORAS</span> DE
                 ENTRENAMIENTO SEMANALES
               </span>
