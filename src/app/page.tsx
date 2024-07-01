@@ -26,8 +26,8 @@ export default function Home() {
           <h2 className="flex flex-col justify-center items-center gap-5 text-center text-xl lg:text-4xl leading-4 ">
             <span className="text-l sm:text-3xl lg:text-4xl 2xl:text-5xl font-extrabold ">
               COMO CAMBIAR TU <span className="blueColor">CUERPO</span>, MEJORAR
-              TU SALUD Y TRANSFORMAR TU MENTALIDAD <br />{" "}
-              <span >
+              TU SALUD Y TRANSFORMAR TU MENTALIDAD <br /> <br />
+              <span>
                 CON <span className="blueColor">SOLO 3 HORAS</span> DE
                 ENTRENAMIENTO SEMANALES
               </span>
