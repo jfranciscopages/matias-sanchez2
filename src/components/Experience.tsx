@@ -10,7 +10,7 @@ const Experience = () => {
       {/* <h2 className="text-l sm:text-2xl lg:text-2xl 2xl:text-4xl font-extrabold">
         TRABAJANDO CONMIGO
       </h2> */}
-      <div className=" my-10 w-full h-full max-w-[1000px] mx-auto">
+      <div className=" lg:my-10 w-full h-full max-w-[1000px] mx-auto">
         <VimeoCarousel />
       </div>
     </section>

@@ -36,8 +36,8 @@
 
 .heightMobile {
   @media screen and (max-width: 768px) {
-    margin-top: 20%;
-    margin-bottom: 20%;
+    margin-top: 5%;
+    /* margin-bottom: 20%; */
   }
 }
 
