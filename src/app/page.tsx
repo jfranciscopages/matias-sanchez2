@@ -26,7 +26,7 @@ export default function Home() {
           <h2 className="flex flex-col justify-center items-center gap-5 text-center text-xl lg:text-4xl leading-4 ">
             <span className="text-l sm:text-3xl lg:text-4xl 2xl:text-5xl font-extrabold ">
               COMO CAMBIAR TU <span className="blueColor">CUERPO</span>, MEJORAR
-              TU SALUD Y TRANSFORMAR TU MENTALIDAD
+              TU SALUD Y TRANSFORMAR TU MENTALIDAD CON <span className="blueColor">SOLO 3 HORAS</span> DE ENTRENAMIENTO SEMANALES
             </span>
           </h2>
         </section>
@@ -64,7 +64,7 @@ export default function Home() {
         </div>
       </div>
 
-      <section className="isMobile">
+      <section className="">
         <div className="h-[40px] mt-20 w-full flex justify-center items-center px-4 md:px-10 lg:px-20 max-w-[1350px] mx-auto">
           <div className="divider"></div>
         </div>

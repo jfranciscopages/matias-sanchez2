@@ -19,7 +19,7 @@ const VimeoCarousel = () => {
     <div className="justify-center  overflow-hidden relative flex">
       <div className=" flex w-full h-full max-w-[600px] max-h-full 2xl:max-h-full transition-transform ease-out duration-1200">
         <iframe
-          className="z-10 "
+          className="z-10 testimoniosMobile"
           title="vimeo-video"
           src={`https://player.vimeo.com/video/${vimeoVideos[currentVideoIndex]}`}
           width="600"
