@@ -26,7 +26,11 @@ export default function Home() {
           <h2 className="flex flex-col justify-center items-center gap-5 text-center text-xl lg:text-4xl leading-4 ">
             <span className="text-l sm:text-3xl lg:text-4xl 2xl:text-5xl font-extrabold ">
               COMO CAMBIAR TU <span className="blueColor">CUERPO</span>, MEJORAR
-              TU SALUD Y TRANSFORMAR TU MENTALIDAD CON <span className="blueColor">SOLO 3 HORAS</span> DE ENTRENAMIENTO SEMANALES
+              TU SALUD Y TRANSFORMAR TU MENTALIDAD <br />{" "}
+              <span className="text-m sm:text-2xl lg:text-3xl 2xl:text-4xl">
+                CON <span className="blueColor">SOLO 3 HORAS</span> DE
+                ENTRENAMIENTO SEMANALES
+              </span>
             </span>
           </h2>
         </section>
